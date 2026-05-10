@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(git -C \"c:\\\\Users\\\\������\\\\OneDrive\\\\����\\\\GitHub\\\\Portfolio\" diff HEAD~1 HEAD --name-only)",
+      "PowerShell(git -C \"c:\\\\Users\\\\������\\\\OneDrive\\\\����\\\\GitHub\\\\Portfolio\" reset --soft HEAD~1)"
+    ]
+  }
+}
