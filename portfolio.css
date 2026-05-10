@@ -414,6 +414,25 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .project-card.featured {
+    grid-column: span 1;
+    flex-direction: column;
+  }
+
+  .project-card.featured .project-thumb {
+    width: 100%;
+    height: 200px;
+  }
+
+  .series-card {
+    flex-direction: column;
+  }
+
+  .series-thumb {
+    width: 100%;
+    height: 160px;
+  }
+
   .nav-links {
     gap: 1.2rem;
   }
@@ -431,6 +450,206 @@ footer {
   section {
     padding: 70px 1.2rem;
   }
+}
+
+/* === Hero Buttons === */
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border: 2px solid #444;
+  color: #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: #5865f2;
+  color: #fff;
+}
+
+/* === Project Card with Thumbnail === */
+.project-card.featured {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.project-card.featured .project-thumb {
+  width: 360px;
+  flex-shrink: 0;
+}
+
+.project-card.featured .project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card.featured .project-body {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex: 1;
+}
+
+.project-thumb {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  background: #1a1a1a;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-thumb img {
+  transform: scale(1.04);
+}
+
+.project-body {
+  padding: 1.4rem 1.8rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex: 1;
+}
+
+.project-card:not(.featured) {
+  padding: 0;
+}
+
+.tag-new {
+  background: rgba(88, 101, 242, 0.2) !important;
+  border-color: #5865f2 !important;
+  color: #818cf8 !important;
+  font-weight: 700;
+}
+
+.blog-link {
+  font-size: 0.82rem;
+  color: #5865f2;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.blog-link:hover {
+  color: #818cf8;
+}
+
+/* === Dev Log Section === */
+#devlog {
+  background: #111;
+}
+
+.devlog-intro {
+  color: #999;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+.devlog-intro strong {
+  color: #ddd;
+}
+
+.devlog-series {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.series-card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  display: flex;
+  gap: 0;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.series-card:hover {
+  border-color: #5865f2;
+}
+
+.series-thumb {
+  width: 200px;
+  flex-shrink: 0;
+  background: #111;
+  overflow: hidden;
+}
+
+.series-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.series-info {
+  padding: 1.5rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.series-info--full {
+  padding: 1.5rem 1.8rem;
+}
+
+.series-period {
+  font-size: 0.78rem;
+  color: #5865f2;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.series-info h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.series-info p {
+  font-size: 0.875rem;
+  color: #888;
+  line-height: 1.6;
+}
+
+.btn-blog {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: transparent;
+  border: 2px solid #5865f2;
+  color: #5865f2;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-blog:hover {
+  background: #5865f2;
+  color: #fff;
 }
 
 /* === Fade-in Animation === */
