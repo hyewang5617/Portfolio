@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>정혜원 | 게임 개발자 포트폴리오</title>
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">정혜원</span>
+      <ul class="nav-links">
+        <li><a href="#about">소개</a></li>
+        <li><a href="#skills">기술</a></li>
+        <li><a href="#projects">프로젝트</a></li>
+        <li><a href="#contact">연락처</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-sub">안녕하세요,</p>
+      <h1 class="hero-name">정혜원입니다</h1>
+      <p class="hero-desc">게임 개발자를 꿈꾸는 대학생입니다.<br>Unity, GameMaker, p5.js, Python 으로 게임을 만들고 있습니다.</p>
+      <a href="#projects" class="btn-primary">프로젝트 보기</a>
+    </div>
+    <div class="hero-scroll">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="section-inner">
+      <h2 class="section-title">소개</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            게임을 사랑하는 대학생으로, 직접 게임을 만들며 개발자의 꿈을 키우고 있습니다.
+            Unity와 GameMaker Studio로 2D 게임을 만들고, p5.js로 브라우저 게임을 개발하는 등
+            다양한 환경에서 게임 개발 경험을 쌓고 있습니다.
+          </p>
+          <p>
+            혼자서도, 팀으로도 프로젝트를 진행해 왔으며, 재미있는 게임 경험을 만드는 것을 즐깁니다.
+          </p>
+        </div>
+        <div class="about-info">
+          <div class="info-item">
+            <span class="info-label">관심 분야</span>
+            <span class="info-value">2D 게임 개발, 게임 플레이 디자인</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">사용 엔진</span>
+            <span class="info-value">Unity · GameMaker Studio · p5.js</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">언어</span>
+            <span class="info-value">C# · JavaScript · Python</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="section-inner">
+      <h2 class="section-title">기술 스택</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🎮</div>
+          <h3>Unity</h3>
+          <p>C# 스크립팅, 2D 플랫포머 구현, 물리 엔진 활용</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🛠️</div>
+          <h3>GameMaker Studio</h3>
+          <p>GML을 활용한 2D 게임 개발, 스프라이트·타일셋 관리</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🌐</div>
+          <h3>p5.js / JavaScript</h3>
+          <p>브라우저 기반 게임 개발, 물리 시뮬레이션, 인터랙티브 그래픽</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🐍</div>
+          <h3>Python</h3>
+          <p>tkinter GUI 게임, 데이터 처리, 게임 로직 구현</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="section-inner">
+      <h2 class="section-title">프로젝트</h2>
+      <div class="projects-grid">
+
+        <!-- 포도씨의 모험 -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-year">2020</div>
+            <div class="project-tags">
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">2D 플랫포머</span>
+            </div>
+          </div>
+          <h3 class="project-title">포도씨의 모험</h3>
+          <p class="project-subtitle">더블점프를 했더니 하드코어가 되었습니다</p>
+          <p class="project-desc">
+            Unity로 제작한 2D 플랫포머 게임입니다. 더블점프 메커니즘을 활용하여 하드코어 난이도의 플랫폼 어드벤처를 구현했습니다.
+          </p>
+          <div class="project-footer">
+            <span class="project-engine">Unity 2D</span>
+          </div>
+        </div>
+
+        <!-- Shark Timer Game -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-year">2021</div>
+            <div class="project-tags">
+              <span class="tag">p5.js</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">협업</span>
+            </div>
+          </div>
+          <h3 class="project-title">Shark Timer Game</h3>
+          <p class="project-subtitle">박종혁 & 정혜원 공동 제작</p>
+          <p class="project-desc">
+            p5.js로 제작한 브라우저 게임입니다. 상어 캐릭터와 타이머가 있으며, 마우스 커서가 물고기로 바뀌는 인터랙티브한 요소가 특징입니다.
+          </p>
+          <div class="project-footer">
+            <span class="project-engine">p5.js</span>
+          </div>
+        </div>
+
+        <!-- Arrow Master -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-year">2023</div>
+            <div class="project-tags">
+              <span class="tag">p5.js</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">2인용</span>
+            </div>
+          </div>
+          <h3 class="project-title">Arrow Master</h3>
+          <p class="project-subtitle">2인용 궁술 대결 게임</p>
+          <p class="project-desc">
+            두 플레이어가 번갈아 화살을 쏘는 대전 게임입니다. 바람 방향과 세기에 따라 화살 궤적이 달라지며, 부위별 데미지(머리, 몸통, 다리)가 적용됩니다. 마우스 드래그로 발사 방향과 힘을 조절합니다.
+          </p>
+          <div class="project-footer">
+            <span class="project-engine">p5.js</span>
+          </div>
+        </div>
+
+        <!-- 더 인기, 더 팔로워 -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-year">2023</div>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">tkinter</span>
+              <span class="tag">퀴즈 게임</span>
+            </div>
+          </div>
+          <h3 class="project-title">더 인기, 더 팔로워</h3>
+          <p class="project-subtitle">팔로워 수 맞추기 퀴즈 게임</p>
+          <p class="project-desc">
+            두 인물의 사진을 보고 팔로워가 더 많은 사람을 맞추는 퀴즈 게임입니다. Python tkinter로 GUI를 구현하고, 판다스로 데이터를 관리합니다.
+          </p>
+          <div class="project-footer">
+            <span class="project-engine">Python · tkinter</span>
+          </div>
+        </div>
+
+        <!-- 빛이있으라 -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-year">2024</div>
+            <div class="project-tags">
+              <span class="tag">GameMaker Studio</span>
+              <span class="tag">GML</span>
+              <span class="tag">2D</span>
+            </div>
+          </div>
+          <h3 class="project-title">빛이있으라</h3>
+          <p class="project-subtitle">GameMaker Studio 2D 게임</p>
+          <p class="project-desc">
+            GameMaker Studio로 제작한 2D 게임입니다. 스프라이트, 타일셋, 사운드, 시퀀스 등 GameMaker의 다양한 기능을 활용하여 개발했습니다.
+          </p>
+          <div class="project-footer">
+            <span class="project-engine">GameMaker Studio 2</span>
+          </div>
+        </div>
+
+        <!-- 내 과일을 받아줘 -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-year">2024</div>
+            <div class="project-tags">
+              <span class="tag">p5.js</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">스테이지</span>
+            </div>
+          </div>
+          <h3 class="project-title">내 과일을 받아줘</h3>
+          <p class="project-subtitle">하늘에서 떨어지는 과일을 받아라!</p>
+          <p class="project-desc">
+            하늘에서 떨어지는 과일을 소쿠리로 받아내는 5단계 게임입니다. 좌우 방향키로 캐릭터를 이동하며, 스테이지마다 과일 종류와 제한 시간이 달라집니다. 캐릭터 걷기 애니메이션을 구현했습니다.
+          </p>
+          <div class="project-footer">
+            <span class="project-engine">p5.js</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-inner">
+      <h2 class="section-title">연락처</h2>
+      <div class="contact-box">
+        <p class="contact-desc">프로젝트 협업이나 문의 사항이 있으시면 언제든지 연락해 주세요.</p>
+        <a href="mailto:j65995617@gmail.com" class="contact-email">j65995617@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 정혜원. All rights reserved.</p>
+  </footer>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# Unity 빌드 결과물
+*.exe
+*.dll
+*.mdb
+*.pdb
+*.resS
+*.resource
+*.assets
+*_Data/
+MonoBleedingEdge/
+UnityCrashHandler64.exe
+UnityPlayer.dll
+
+# 압축 파일
+*.zip
+*.rar
+*.7z
+
+# GameMaker 바이너리
+*.resource_order
+
+# IDE
+.vs/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

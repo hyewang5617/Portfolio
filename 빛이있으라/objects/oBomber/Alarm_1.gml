@@ -1,0 +1,1 @@
+instance_create_depth(x,y,1,o_bomber_attack);

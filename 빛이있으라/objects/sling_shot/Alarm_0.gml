@@ -1,0 +1,1 @@
+weapon_check = true;
