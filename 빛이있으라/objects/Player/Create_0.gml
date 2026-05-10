@@ -1,4 +1,4 @@
-#region Player Stat
+ #region Player Stat
 	x_speed_ = 0;
 	y_speed_ = 0;
 	max_speed_ = 3;
@@ -27,6 +27,7 @@ flash = 0;
 	key_down = ord("S");
 	key_right = ord("D");
 	key_pickup = ord("E");
+	
 #endregion
 
 
