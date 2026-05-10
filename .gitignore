@@ -30,5 +30,16 @@ Thumbs.db
 # Claude Code
 .claude/
 
-# Large Unity project folders
+# 게임 소스/빌드 폴더 (포트폴리오 웹사이트에 불필요)
 My project 2D game/
+내과일을 받아줘/
+박종혁 and 정혜원/
+arrow_master/
+python/
+빛이있으라/
+포도씨의 모험-더블점프를 했더니 하드코어가 되었습니다/
+게임개발일지, 해왕이 가죽남기기 _ 네이버 블로그_files/
+게임개발일지, 해왕이 가죽남기기 _ 네이버 블로그.html
+
+# 루트 GIF 원본
+GIF*.gif
