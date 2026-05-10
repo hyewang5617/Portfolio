@@ -108,6 +108,27 @@
       <p class="projects-hint">카드를 클릭하면 자세한 설명을 볼 수 있어요</p>
       <div class="projects-grid">
 
+        <!-- 함정 피하기 게임 -->
+        <div class="project-card" data-modal="modal-trap">
+          <div class="project-body">
+            <div class="project-header">
+              <div class="project-year">2025</div>
+              <div class="project-tags">
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+                <span class="tag">2D 플랫포머</span>
+              </div>
+            </div>
+            <h3 class="project-title">함정 피하기 게임</h3>
+            <p class="project-subtitle">2D 플랫포머 게임</p>
+            <p class="project-desc">함정과 장애물을 피해 스테이지를 클리어하는 2D 플랫포머 게임입니다. 더블점프, 트램펄린, 낙하 오브젝트 등 다양한 메커닉이 있습니다.</p>
+            <div class="project-footer">
+              <span class="project-engine">Unity 2D</span>
+              <span class="detail-hint">클릭해서 자세히 보기 →</span>
+            </div>
+          </div>
+        </div>
+
         <!-- ph-1 -->
         <div class="project-card" data-modal="modal-ph1">
           <div class="project-thumb">
@@ -560,6 +581,34 @@
             <li>과일별 낙하 속도·개수 다르게 설정</li>
             <li>소쿠리 충돌 시 과일 튕겨내기 (반사 물리)</li>
             <li>성공/실패 화면 및 스테이지 전환</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 함정 피하기 게임 -->
+  <div class="modal-overlay" id="modal-trap">
+    <div class="modal">
+      <button class="modal-close" aria-label="닫기">✕</button>
+      <div class="modal-content">
+        <div class="modal-tags">
+          <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">2D 플랫포머</span>
+        </div>
+        <h2 class="modal-title">함정 피하기 게임</h2>
+        <p class="modal-period">📅 2025년</p>
+        <p class="modal-summary">함정과 장애물을 피해 스테이지를 클리어하는 2D 플랫포머 게임입니다. 다양한 트랩 메커닉과 멀티 스테이지 구성이 특징입니다.</p>
+        <div class="modal-devlog">
+          <h4>주요 구현 내용</h4>
+          <ul>
+            <li>방향키 이동 + 스페이스 더블점프</li>
+            <li>HP 3개 하트 UI — 피격 시 넉백 및 무적 시간</li>
+            <li>트램펄린 — 충돌 시 2배 점프력으로 튀어오르기</li>
+            <li>트랩 트리거 — 플레이어 진입 시 함정이 이동</li>
+            <li>이벤트 트리거 — 특정 지점 통과 시 오브젝트 낙하</li>
+            <li>아이템 — 획득 시 HP 회복</li>
+            <li>멀티 스테이지 시스템 및 게임오버·클리어 UI</li>
+            <li>총 재시도 횟수 기록 (SessionStats)</li>
           </ul>
         </div>
       </div>
