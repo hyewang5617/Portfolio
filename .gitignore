@@ -41,5 +41,22 @@ python/
 게임개발일지, 해왕이 가죽남기기 _ 네이버 블로그_files/
 게임개발일지, 해왕이 가죽남기기 _ 네이버 블로그.html
 
-# 루트 GIF 원본
+# 루트 GIF/MP4 원본
 GIF*.gif
+GIF*.mp4
+
+# 네이버 블로그 아카이브
+*.mhtml
+
+# MHTML 임시 추출 폴더
+images/mhtml_extracted/
+images/mhtml2_extracted/
+
+# 원본 SNS 이미지 (이미 깔끔한 이름으로 복사됨)
+images/EO*.jpg
+images/EP*.png
+images/EP*.jpg
+images/ER*.jpg
+images/ER*.png
+images/arrow_snowman2.png
+images/bitgame4.gif
