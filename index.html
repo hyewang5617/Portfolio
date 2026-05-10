@@ -108,6 +108,28 @@
       <p class="projects-hint">카드를 클릭하면 자세한 설명을 볼 수 있어요</p>
       <div class="projects-grid">
 
+        <!-- 로드 크로싱 게임 -->
+        <div class="project-card featured" data-modal="modal-road">
+          <div class="project-body" style="justify-content:center;">
+            <div class="project-header">
+              <div class="project-year">2025</div>
+              <div class="project-tags">
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+                <span class="tag">3D</span>
+                <span class="tag tag-new">최신</span>
+              </div>
+            </div>
+            <h3 class="project-title">로드 크로싱</h3>
+            <p class="project-subtitle">게임프로그래밍 수업 기말 프로젝트</p>
+            <p class="project-desc">차가 달리는 도로를 건너 목표 지점에 도달하는 3D 게임입니다. 더블점프·타임슬로우·제트팩 스킬을 해금·업그레이드할 수 있으며, 4개의 스테이지로 구성됩니다.</p>
+            <div class="project-footer">
+              <span class="project-engine">Unity 3D</span>
+              <span class="detail-hint">클릭해서 자세히 보기 →</span>
+            </div>
+          </div>
+        </div>
+
         <!-- 뱀서라이크 -->
         <div class="project-card featured" data-modal="modal-vamp">
           <div class="project-thumb">
@@ -120,7 +142,6 @@
                 <span class="tag">Unity</span>
                 <span class="tag">C#</span>
                 <span class="tag">로그라이크</span>
-                <span class="tag tag-new">최신</span>
               </div>
             </div>
             <h3 class="project-title">뱀서라이크</h3>
@@ -512,6 +533,42 @@
             <li>성공/실패 화면 및 스테이지 전환</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 로드 크로싱 -->
+  <div class="modal-overlay" id="modal-road">
+    <div class="modal">
+      <button class="modal-close" aria-label="닫기">✕</button>
+      <div class="modal-content">
+        <div class="modal-tags">
+          <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">3D</span><span class="tag tag-new">최신</span>
+        </div>
+        <h2 class="modal-title">로드 크로싱</h2>
+        <p class="modal-period">📅 2025년 12월 · 게임프로그래밍 수업 기말 프로젝트</p>
+        <p class="modal-summary">차가 달리는 도로를 건너 골 지점에 도달하는 3D 게임입니다. 스테이지를 클리어하며 획득한 재화로 상점에서 스킬을 업그레이드할 수 있습니다.</p>
+        <div class="modal-devlog">
+          <h4>주요 구현 내용</h4>
+          <ul>
+            <li>웨이포인트 기반 차량 스폰 및 이동 시스템</li>
+            <li>더블점프 · 타임슬로우(Q) · 제트팩(Space) 스킬 시스템</li>
+            <li>스킬별 게이지 소모·회복 및 해금 조건 구현</li>
+            <li>재화·점수 저장(DataManager), 스테이지 간 영구 업그레이드</li>
+            <li>상점 UI — 스킬 선택·레벨업 구매 흐름</li>
+            <li>로딩 진행바, 게임오버·레벨클리어 패널 UI</li>
+            <li>4개 스테이지 구성 (Stage 1 ~ Stage 4)</li>
+          </ul>
+        </div>
+        <div class="modal-devlog" style="margin-top:0.8rem">
+          <h4>사용 에셋</h4>
+          <ul>
+            <li>ARCADE FREE Racing Car · Nebula Free Car Pack (차량 모델)</li>
+            <li>BrokenVector, GabrielAguiarProductions (이펙트)</li>
+            <li>SimplePixelUI (UI 디자인)</li>
+          </ul>
+        </div>
+        <a href="https://github.com/hyewang5617/Gameprogramming_final" target="_blank" class="btn-primary">GitHub에서 보기 →</a>
       </div>
     </div>
   </div>
