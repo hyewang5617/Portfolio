@@ -566,6 +566,28 @@ footer {
   background: #f0f0f0;
 }
 
+.video-thumb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #e8e8ff;
+  cursor: pointer;
+}
+
+.play-btn {
+  font-size: 2.5rem;
+  color: #5865f2;
+  line-height: 1;
+}
+
+.play-label {
+  font-size: 0.8rem;
+  color: #5865f2;
+  font-weight: 600;
+}
+
 .modal-video {
   width: 100%;
   aspect-ratio: 16 / 9;
