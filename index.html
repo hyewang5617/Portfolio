@@ -51,7 +51,7 @@
           </p>
           <p>
             혼자서도, 팀으로도 프로젝트를 진행해 왔으며,
-            중·고등학교 시절부터 개발 과정을 블로그에 꾸준히 기록하고 있습니다.
+            중·고등학교 시절부터 꾸준히 게임을 만들어왔습니다.
           </p>
         </div>
         <div class="about-info">
@@ -66,10 +66,6 @@
           <div class="info-item">
             <span class="info-label">언어</span>
             <span class="info-value">C# · JavaScript · Python</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">개발일지</span>
-            <span class="info-value">네이버 블로그 73개 포스팅</span>
           </div>
         </div>
       </div>
@@ -109,7 +105,7 @@
   <section id="projects">
     <div class="section-inner">
       <h2 class="section-title">프로젝트</h2>
-      <p class="projects-hint">카드를 클릭하면 개발일지를 볼 수 있어요</p>
+      <p class="projects-hint">카드를 클릭하면 자세한 설명을 볼 수 있어요</p>
       <div class="projects-grid">
 
         <!-- 뱀서라이크 -->
@@ -132,7 +128,7 @@
             <p class="project-desc">자동 공격, 몬스터 웨이브, 경험치·레벨업 시스템을 Unity로 구현한 로그라이크 슈터 게임입니다.</p>
             <div class="project-footer">
               <span class="project-engine">Unity 2D</span>
-              <span class="detail-hint">클릭해서 개발일지 보기 →</span>
+              <span class="detail-hint">클릭해서 자세히 보기 →</span>
             </div>
           </div>
         </div>
@@ -156,7 +152,7 @@
             <p class="project-desc">더블점프 메커니즘을 활용한 하드코어 2D 플랫포머 게임입니다.</p>
             <div class="project-footer">
               <span class="project-engine">Unity 2D</span>
-              <span class="detail-hint">클릭해서 개발일지 보기 →</span>
+              <span class="detail-hint">클릭해서 자세히 보기 →</span>
             </div>
           </div>
         </div>
@@ -175,6 +171,27 @@
             <h3 class="project-title">Shark Timer Game</h3>
             <p class="project-subtitle">박종혁 & 정혜원 공동 제작</p>
             <p class="project-desc">상어 캐릭터와 타이머, 물고기 마우스 커서가 특징인 p5.js 브라우저 게임입니다.</p>
+            <div class="project-footer">
+              <span class="project-engine">p5.js</span>
+              <span class="detail-hint">클릭해서 자세히 보기 →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 뽥머랭님 팬게임 -->
+        <div class="project-card" data-modal="modal-fan">
+          <div class="project-body">
+            <div class="project-header">
+              <div class="project-year">2021</div>
+              <div class="project-tags">
+                <span class="tag">p5.js</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">팬게임</span>
+              </div>
+            </div>
+            <h3 class="project-title">뽥머랭님 팬게임</h3>
+            <p class="project-subtitle">좋아하는 유튜버를 주제로 만든 팬게임</p>
+            <p class="project-desc">좋아하는 유튜버 뽥머랭님을 주제로 직접 기획하고 제작한 팬게임입니다.</p>
             <div class="project-footer">
               <span class="project-engine">p5.js</span>
               <span class="detail-hint">클릭해서 자세히 보기 →</span>
@@ -243,7 +260,7 @@
             <p class="project-desc">GameMaker Studio로 9차시에 걸쳐 제작하고 출시까지 완료한 2D 게임입니다.</p>
             <div class="project-footer">
               <span class="project-engine">GameMaker Studio 2</span>
-              <span class="detail-hint">클릭해서 개발일지 보기 →</span>
+              <span class="detail-hint">클릭해서 자세히 보기 →</span>
             </div>
           </div>
         </div>
@@ -493,6 +510,29 @@
             <li>과일별 낙하 속도·개수 다르게 설정</li>
             <li>소쿠리 충돌 시 과일 튕겨내기 (반사 물리)</li>
             <li>성공/실패 화면 및 스테이지 전환</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 뽥머랭님 팬게임 -->
+  <div class="modal-overlay" id="modal-fan">
+    <div class="modal">
+      <button class="modal-close" aria-label="닫기">✕</button>
+      <div class="modal-content">
+        <div class="modal-tags">
+          <span class="tag">p5.js</span><span class="tag">JavaScript</span><span class="tag">팬게임</span>
+        </div>
+        <h2 class="modal-title">뽥머랭님 팬게임</h2>
+        <p class="modal-period">📅 2021년 2월</p>
+        <p class="modal-summary">좋아하는 유튜버 뽥머랭님을 주제로 직접 기획부터 제작까지 진행한 팬게임입니다. 게임 개발을 독학하던 시기에 도전한 초기 개인 프로젝트입니다.</p>
+        <div class="modal-devlog">
+          <h4>주요 구현 내용</h4>
+          <ul>
+            <li>p5.js로 게임 화면 및 캐릭터 직접 구현</li>
+            <li>뽥머랭님 관련 콘텐츠를 게임 요소로 녹여낸 기획</li>
+            <li>기획 → 구현까지 혼자 진행한 첫 개인 프로젝트</li>
           </ul>
         </div>
       </div>
