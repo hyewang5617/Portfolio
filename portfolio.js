@@ -1,66 +1,81 @@
-// === Modal ===
-document.querySelectorAll('.project-card[data-modal]').forEach((card) => {
-  card.addEventListener('click', () => {
-    const id = card.dataset.modal;
-    const modal = document.getElementById(id);
-    if (modal) modal.classList.add('open');
+// === Modal open/close ===
+function openModal(id) {
+  var modal = document.getElementById(id);
+  if (modal) {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeModal(overlay) {
+  overlay.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// 프로젝트 카드 클릭 → 모달 열기
+document.querySelectorAll('.project-card[data-modal]').forEach(function(card) {
+  card.addEventListener('click', function() {
+    openModal(card.getAttribute('data-modal'));
   });
 });
 
-document.querySelectorAll('.modal-close').forEach((btn) => {
-  btn.addEventListener('click', (e) => {
+// ✕ 버튼 클릭 → 닫기
+document.querySelectorAll('.modal-close').forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
     e.stopPropagation();
-    btn.closest('.modal-overlay').classList.remove('open');
+    closeModal(btn.closest('.modal-overlay'));
   });
 });
 
-document.querySelectorAll('.modal-overlay').forEach((overlay) => {
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) overlay.classList.remove('open');
+// 배경(overlay) 클릭 → 닫기
+document.querySelectorAll('.modal-overlay').forEach(function(overlay) {
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) closeModal(overlay);
   });
 });
 
-document.addEventListener('keydown', (e) => {
+// ESC 키 → 닫기
+document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
-    document.querySelectorAll('.modal-overlay.open').forEach((o) => o.classList.remove('open'));
+    document.querySelectorAll('.modal-overlay').forEach(function(o) {
+      if (o.style.display === 'flex') closeModal(o);
+    });
   }
 });
 
-// === Scroll fade-in ===
-const observer = new IntersectionObserver(
-  (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-  { threshold: 0.1 }
-);
+// === 스크롤 페이드인 ===
+var fadeEls = document.querySelectorAll('.skill-card, .project-card, .about-grid, .contact-box, .info-item');
 
-document.querySelectorAll('.skill-card, .project-card, .about-grid, .contact-box, .info-item').forEach((el) => {
-  el.classList.add('fade-in');
-  observer.observe(el);
-});
+if ('IntersectionObserver' in window) {
+  var fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
 
-// === Active nav on scroll ===
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
+  fadeEls.forEach(function(el) {
+    el.classList.add('fade-in');
+    fadeObserver.observe(el);
+  });
+}
 
-new IntersectionObserver(
-  (entries) => entries.forEach((e) => {
-    if (e.isIntersecting) {
-      navLinks.forEach((l) => l.classList.remove('active'));
-      const a = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
-      if (a) a.classList.add('active');
-    }
-  }),
-  { threshold: 0.4 }
-).observe(document.querySelectorAll ? sections[0] : sections);
+// === 네비게이션 활성화 ===
+var sections = document.querySelectorAll('section[id]');
+var navLinks = document.querySelectorAll('.nav-links a');
 
-sections.forEach((s) => {
-  new IntersectionObserver(
-    (entries) => entries.forEach((e) => {
-      if (e.isIntersecting) {
-        navLinks.forEach((l) => l.classList.remove('active'));
-        const a = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+if ('IntersectionObserver' in window && sections.length) {
+  var navObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        navLinks.forEach(function(l) { l.classList.remove('active'); });
+        var a = document.querySelector('.nav-links a[href="#' + entry.target.id + '"]');
         if (a) a.classList.add('active');
       }
-    }),
-    { threshold: 0.4 }
-  ).observe(s);
-});
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(function(s) { navObserver.observe(s); });
+}

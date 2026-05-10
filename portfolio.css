@@ -477,6 +477,24 @@ section {
   color: #fff;
 }
 
+.contact-phone {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #444;
+  border: 2px solid #ddd;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  width: fit-content;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.contact-phone:hover {
+  border-color: #5865f2;
+  color: #5865f2;
+}
+
 /* === Footer === */
 footer {
   background: #f2f2f2;
