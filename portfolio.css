@@ -159,6 +159,13 @@ section {
   transform: translateY(-2px);
 }
 
+.modal-footer {
+  padding: 1rem 1.5rem 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
 .btn-secondary {
   display: inline-block;
   padding: 0.75rem 2rem;
