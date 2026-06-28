@@ -136,6 +136,32 @@
           </div>
         </div>
 
+        <!-- Cooking Papa (2026) -->
+        <div class="project-card" data-modal="modal-cooking">
+          <div class="project-thumb video-thumb">
+            <div class="play-btn">▶</div>
+            <span class="play-label">플레이영상 보기</span>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <div class="project-year">2026</div>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">MediaPipe</span>
+                <span class="tag">컴퓨터비전</span>
+              </div>
+            </div>
+            <h3 class="project-title">Cooking Papa</h3>
+            <p class="project-subtitle">웹캠 손동작 인식 쿠킹마마 스타일 게임 · 컴퓨터비전 수업</p>
+            <p class="project-desc">웹캠으로 손을 인식해 키보드·마우스 없이 손짓만으로 요리하는 쿠킹마마 스타일 게임입니다. OpenCV와 MediaPipe로 손 동작을 추적합니다.</p>
+            <div class="project-footer">
+              <span class="project-engine">Python · OpenCV</span>
+              <span class="detail-hint">클릭해서 자세히 보기 →</span>
+            </div>
+          </div>
+        </div>
+
         <!-- Crazy Commuter (2025.12) -->
         <div class="project-card featured" data-modal="modal-road">
           <div class="project-thumb">
@@ -879,6 +905,38 @@
             <li>씬 구성: 프롤로그 → 타이틀 → 인트로 → 1-1 · 1-2 · 홀 → 2층 홀</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cooking Papa -->
+  <div class="modal-overlay" id="modal-cooking">
+    <div class="modal">
+      <button class="modal-close" aria-label="닫기">✕</button>
+      <div class="modal-video">
+        <iframe src="https://www.youtube.com/embed/rqzNLpTx-Jo" title="Cooking Papa 플레이영상" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="modal-content">
+        <div class="modal-tags">
+          <span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">MediaPipe</span><span class="tag">컴퓨터비전</span>
+        </div>
+        <h2 class="modal-title">Cooking Papa</h2>
+        <p class="modal-period">📅 2026년 · 컴퓨터비전 수업 · 혼자 제작</p>
+        <p class="modal-summary">웹캠과 손동작만으로 플레이하는 쿠킹마마 스타일 요리 게임입니다. 키보드나 마우스 없이 손짓만으로 조리하며, 핀홀 카메라 투영·깊이 추정·칼만 필터를 이용해 손 위치와 속도를 정밀하게 추적합니다.</p>
+        <div class="modal-devlog">
+          <h4>주요 구현 내용</h4>
+          <ul>
+            <li>OpenCV + MediaPipe HandLandmarker로 손 인식 및 추적</li>
+            <li>핀홀 카메라 투영, 깊이 추정, 칼만 필터로 손 위치·속도 보정</li>
+            <li>두 가지 미니게임 — 함박 스테이크 굽기, 팬케이크 만들기</li>
+            <li>"꾹 누르기" 방식의 오실렉션 방지 버튼 인터랙션</li>
+            <li>음성 안내 및 효과음 피드백 (pygame.mixer), 오디오 폴백 톤 처리</li>
+            <li>카메라 자동 탐색, 랭킹 시스템 (상위 10개 기록 저장)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://github.com/hyewang5617/cooking-papa" target="_blank" class="btn-primary">GitHub에서 보기 →</a>
       </div>
     </div>
   </div>
