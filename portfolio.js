@@ -17,6 +17,12 @@ document.querySelectorAll('.project-card[data-modal]').forEach(function(card) {
   card.addEventListener('click', function() {
     openModal(card.getAttribute('data-modal'));
   });
+  card.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openModal(card.getAttribute('data-modal'));
+    }
+  });
 });
 
 // ✕ 버튼 클릭 → 닫기

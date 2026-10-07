@@ -342,6 +342,20 @@ section {
   background: #f0f0f0;
 }
 
+.meme-gameplay {
+  background: #000;
+}
+
+.meme-gameplay img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.project-thumb.meme-gameplay img { height: 100%; }
+.project-card:focus-visible { outline: 3px solid #5865f2; outline-offset: 4px; }
+
 .project-card:not(.featured) .project-thumb {
   height: 180px;
 }

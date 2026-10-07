@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>정혜원 | 게임 개발자 포트폴리오</title>
-  <link rel="stylesheet" href="portfolio.css?v=3" />
+  <title>정혜원 | 프로젝트 포트폴리오</title>
+  <meta name="description" content="게임 개발에 관심을 두고 다양한 분야의 프로젝트를 만드는 정혜원의 포트폴리오입니다." />
+  <link rel="stylesheet" href="portfolio.css?v=4" />
 </head>
 <body>
 
@@ -26,7 +27,7 @@
     <div class="hero-content">
       <p class="hero-sub">안녕하세요,</p>
       <h1 class="hero-name">정혜원입니다</h1>
-      <p class="hero-desc">게임 개발자를 꿈꾸는 대학생입니다.<br>Unity, GameMaker, p5.js, Python 으로 게임을 만들고 있습니다.</p>
+      <p class="hero-desc">아이디어를 직접 만들고 구현하는 대학생입니다.<br>게임 개발에 관심을 두고, 다양한 분야의 프로젝트를 경험하고 있습니다.</p>
       <div class="hero-btns">
         <a href="#projects" class="btn-primary">프로젝트 보기</a>
         <a href="#contact" class="btn-secondary">연락하기</a>
@@ -45,14 +46,14 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            게임을 사랑하는 대학생으로, 직접 게임을 만들며 개발자의 꿈을 키우고 있습니다.
-            Unity와 GameMaker Studio로 2D 및 3D 게임을 만들고, p5.js로 브라우저 게임을 개발하는 등
-            다양한 환경에서 게임 개발 경험을 쌓고 있습니다.
-            공포, 플랫포머, RPG, 퍼즐 등 다양한 장르의 게임을 만든 경험이 있습니다.
+            게임 개발을 좋아하고, 새로운 아이디어를 직접 구현하는 데 관심이 있습니다.
+            Unity와 GameMaker Studio를 활용한 게임부터 JavaScript와 Python을 활용한 프로젝트까지,
+            다양한 도구와 환경에서 작업해 왔습니다.
           </p>
           <p>
-            혼자서도, 팀으로도 프로젝트를 진행해 왔으며,
-            중·고등학교 시절부터 꾸준히 게임을 만들어왔습니다.
+            게임뿐 아니라 다른 분야에서도 프로젝트를 만들며 경험을 넓히고 있습니다.
+            혼자서도, 팀으로도 기획과 구현을 진행해 왔으며,
+            이곳에 그동안 만든 프로젝트를 간략하게 모았습니다.
           </p>
         </div>
         <div class="about-info">
@@ -61,7 +62,7 @@
             <span class="info-value">2D 게임 개발, 게임 플레이 디자인</span>
           </div>
           <div class="info-item">
-            <span class="info-label">사용 엔진</span>
+            <span class="info-label">사용 도구</span>
             <span class="info-value">Unity · GameMaker Studio · p5.js</span>
           </div>
           <div class="info-item">
@@ -96,7 +97,7 @@
         <div class="skill-card">
           <div class="skill-icon">🐍</div>
           <h3>Python</h3>
-          <p>tkinter GUI 게임, 데이터 처리, 게임 로직 구현</p>
+          <p>tkinter GUI, 데이터 처리, OpenCV·MediaPipe를 활용한 손동작 인식</p>
         </div>
       </div>
     </div>
@@ -106,8 +107,30 @@
   <section id="projects">
     <div class="section-inner">
       <h2 class="section-title">프로젝트</h2>
-      <p class="projects-hint">카드를 클릭하면 자세한 설명을 볼 수 있어요</p>
+      <p class="projects-hint">그동안 만든 프로젝트를 모았습니다. 카드를 클릭하면 자세한 설명을 볼 수 있어요.</p>
       <div class="projects-grid">
+
+        <!-- 최신 밈 피하기 (2026 플럼잼) -->
+        <div class="project-card" data-modal="modal-meme" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-meme">
+          <div class="project-thumb meme-gameplay">
+            <img src="images/avoid-trend-memes.gif" alt="최신 밈 피하기 실행 및 게임플레이 영상" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <div class="project-year">2026</div>
+              <div class="project-tags">
+                <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">2D</span><span class="tag">게임잼</span>
+              </div>
+            </div>
+            <h3 class="project-title">최신 밈 피하기</h3>
+            <p class="project-subtitle">2026 플럼잼 · 밈 장애물 회피 게임</p>
+            <p class="project-desc">유행하는 밈을 소재로 한 장애물과 레이저를 피하는 2D 게임입니다. 이동과 더블 점프로 살아남으며 점수를 쌓습니다.</p>
+            <div class="project-footer">
+              <span class="project-engine">Unity 2D</span>
+              <span class="detail-hint">클릭해서 자세히 보기 →</span>
+            </div>
+          </div>
+        </div>
 
         <!-- ph-1 (2026) -->
         <div class="project-card" data-modal="modal-ph1">
@@ -503,6 +526,35 @@
   </footer>
 
   <!-- ===== Modals ===== -->
+
+  <div class="modal-overlay" id="modal-meme" role="dialog" aria-modal="true" aria-labelledby="meme-modal-title">
+    <div class="modal">
+      <button class="modal-close" aria-label="닫기">✕</button>
+      <div class="meme-gameplay">
+        <img src="images/avoid-trend-memes.gif" alt="최신 밈 피하기 실행 및 게임플레이 영상" loading="lazy" />
+      </div>
+      <div class="modal-content">
+        <div class="modal-tags">
+          <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">2D</span><span class="tag">게임잼</span>
+        </div>
+        <h2 class="modal-title" id="meme-modal-title">최신 밈 피하기</h2>
+        <p class="modal-period">📅 2026년 · 플럼잼</p>
+        <p class="modal-summary">67, L을 가져와, 줴줴이야 등 유행하는 밈을 장애물로 구성한 2D 회피 게임입니다. 한 화면에서 랜덤하게 등장하는 스테이지를 버티고, 클리어 후 힐팩으로 체력을 회복하며 다음 단계에 도전합니다.</p>
+        <div class="modal-devlog">
+          <h4>플레이 방식</h4>
+          <ul>
+            <li>좌우 화살표로 이동하고 Space로 점프·더블 점프</li>
+            <li>체력 5로 시작해 장애물과 레이저를 피하며 생존</li>
+            <li>스테이지 클리어 후 힐팩을 획득해 체력 회복</li>
+            <li>생존 시간과 클리어 보너스로 점수 획득, 게임오버 시 최종 점수와 등급 표시</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://github.com/hyewang5617/Avoid-Trend-Memes" target="_blank" rel="noopener noreferrer" class="btn-primary">GitHub에서 보기 →</a>
+      </div>
+    </div>
+  </div>
 
   <!-- 뱀서라이크 -->
   <div class="modal-overlay" id="modal-vamp">
