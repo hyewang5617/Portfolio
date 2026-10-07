@@ -132,6 +132,23 @@
           </div>
         </div>
 
+        <!-- 서울과기대신문사 기사찾기 (2026.05) -->
+        <div class="project-card" data-modal="modal-article-search" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-article-search">
+          <div class="project-thumb article-search-thumb">
+            <img src="images/article-search-network.png" alt="서울과기대신문 기사 검색의 네트워크 그래프와 키워드 미리보기" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <div class="project-year">2026</div>
+              <div class="project-tags"><span class="tag">Python</span><span class="tag">D3.js</span><span class="tag">웹 서비스</span><span class="tag">개인 프로젝트</span></div>
+            </div>
+            <h3 class="project-title">서울과기대신문사 기사찾기</h3>
+            <p class="project-subtitle">기자가 직접 기획한 기사 검색·탐색 서비스</p>
+            <p class="project-desc">신문사 활동 중 겪은 검색과 가독성의 불편을 개선하기 위해 제작했습니다. 검색어 관련도와 기사 간 관계를 네트워크 그래프로 보여주고, 핵심 키워드로 내용을 미리 확인할 수 있습니다.</p>
+            <div class="project-footer"><span class="project-engine">Python · JavaScript · D3.js</span><span class="detail-hint">클릭해서 자세히 보기 →</span></div>
+          </div>
+        </div>
+
         <!-- ph-1 (2026) -->
         <div class="project-card" data-modal="modal-ph1">
           <div class="project-thumb">
@@ -588,6 +605,53 @@
 
   <!-- ===== Modals ===== -->
 
+  <div class="modal-overlay" id="modal-article-search" role="dialog" aria-modal="true" aria-labelledby="article-search-modal-title">
+    <div class="modal">
+      <button class="modal-close" aria-label="닫기">✕</button>
+      <div class="modal-content">
+        <div class="modal-tags"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">D3.js</span><span class="tag">TF-IDF</span><span class="tag">GitHub Pages</span></div>
+        <h2 class="modal-title" id="article-search-modal-title">서울과기대신문사 기사찾기</h2>
+        <p class="modal-period">📅 2026년 5월 · 개인 프로젝트 · 직접 기획·개발</p>
+        <p class="modal-summary">서울과기대신문사 기자로 활동하며 기획회의와 기사 작성에 필요한 과거 기사를 자주 찾아야 했습니다. 공식 홈페이지에서 원하는 기사를 찾기 어렵고 가독성이 아쉽다고 느껴, 같은 불편을 겪는 기자들이 기사를 더 쉽게 탐색할 수 있는 검색 서비스를 직접 제작했습니다.</p>
+        <div class="modal-devlog">
+          <h4>해결하려던 문제</h4>
+          <ul>
+            <li>검색 결과가 관련도보다 최신순으로 표시돼 주제를 중점적으로 다룬 기사를 찾기 어려웠습니다.</li>
+            <li>오래된 기사가 누락되거나, 내용을 확인하려고 기사를 하나씩 열어봐야 하는 불편이 있었습니다.</li>
+            <li>629~715호의 기사 1,166개를 검색과 탐색에 활용할 수 있도록 데이터를 구축했습니다.</li>
+          </ul>
+        </div>
+        <div class="modal-devlog">
+          <h4>주요 기능과 기술</h4>
+          <ul>
+            <li>Python으로 기사 데이터를 처리하고, HTML·CSS·JavaScript와 D3.js로 검색 화면과 네트워크 그래프 구현</li>
+            <li>제목·본문의 검색어 등장 빈도로 관련도 계산, 관련도가 높은 기사일수록 큰 노드로 표시</li>
+            <li>TF-IDF 키워드와 코사인 유사도로 내용이 비슷한 기사들을 연결</li>
+            <li>기사의 주요 키워드를 워드클라우드로 미리 확인하고 공식 홈페이지 원문으로 이동</li>
+            <li>기사 카테고리 필터와 전체 검색 결과의 언급순·최신순 정렬</li>
+            <li>GitHub Actions · GitHub Pages를 활용한 웹 배포</li>
+          </ul>
+        </div>
+        <div class="modal-devlog">
+          <h4>모바일 개선과 실제 활용</h4>
+          <ul>
+            <li>처음에는 PC 중심으로 개발했지만, 스마트폰에서 UI 배치와 그래프 조작의 불편을 직접 확인했습니다.</li>
+            <li>화면 크기에 맞는 UI, 터치로 기사 키워드 확인, 그래프 이동과 두 손가락 확대·축소를 지원하도록 개선했습니다.</li>
+            <li>신문사 기자들의 기획회의와 기사 작성 과정에서 활용했습니다.</li>
+          </ul>
+        </div>
+        <div class="storyboard-gallery">
+          <figure><a href="images/article-search-network.png" target="_blank" rel="noopener noreferrer"><img src="images/article-search-network.png" alt="네트워크 그래프, 기사 관계 연결, 키워드 미리보기와 원문 연결 설명" loading="lazy" /></a><figcaption>검색 결과와 기사 간 관계 시각화</figcaption></figure>
+          <figure><a href="images/article-search-mobile.png" target="_blank" rel="noopener noreferrer"><img src="images/article-search-mobile.png" alt="기사 검색 서비스의 모바일 화면과 터치 조작 개선 설명" loading="lazy" /></a><figcaption>모바일 사용성 개선</figcaption></figure>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://hyewang5617.github.io/Search-for-articles-of-seoultech/" target="_blank" rel="noopener noreferrer" class="btn-primary">기사 검색해 보기 →</a>
+        <a href="https://github.com/hyewang5617/Search-for-articles-of-seoultech" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub에서 보기 →</a>
+      </div>
+    </div>
+  </div>
+
   <div class="modal-overlay" id="modal-pomodoro" role="dialog" aria-modal="true" aria-labelledby="pomodoro-modal-title">
     <div class="modal">
       <button class="modal-close" aria-label="닫기">✕</button>
@@ -763,7 +827,7 @@
             <li>체력 5로 시작해 장애물과 레이저를 피하며 생존</li>
             <li>스테이지 클리어 후 힐팩을 획득해 체력 회복</li>
             <li>생존 시간과 클리어 보너스로 점수 획득, 게임오버 시 최종 점수와 등급 표시</li>
-            <li>개발자 모드: 모드 선택 화면에서 <kbd>]</kbd> 키를 누르면 왼쪽 위에 활성화 여부가 표시됩니다.</li>
+            <li>개발자 모드: 모드 선택 화면에서 <kbd>]</kbd> 키를 누르면 왼쪽 위에 활성화 여부가 표시됩니다. 활성화하면 목숨이 무한이 되어 기믹을 계속 확인할 수 있습니다.</li>
           </ul>
         </div>
         <div class="modal-devlog">
