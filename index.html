@@ -132,6 +132,28 @@
           </div>
         </div>
 
+        <!-- 메뉴담기 (2026) -->
+        <div class="project-card" data-modal="modal-menudamgi" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-menudamgi">
+          <div class="project-thumb">
+            <img src="images/menudamgi-dashboard.png" alt="메뉴담기 주문 현황 대시보드와 메뉴별 집계" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <div class="project-year">2026</div>
+              <div class="project-tags">
+                <span class="tag">JavaScript</span><span class="tag">웹 서비스</span><span class="tag">개인 프로젝트</span>
+              </div>
+            </div>
+            <h3 class="project-title">메뉴담기</h3>
+            <p class="project-subtitle">신문사 총무의 불편에서 시작한 단체 주문 관리 서비스</p>
+            <p class="project-desc">음식과 디저트 주문을 함께 관리하기 어려웠던 경험을 바탕으로 직접 기획하고, AI와 함께 구현·배포했습니다. 실제 사용 후 모바일에서도 보기 편하도록 개선했습니다.</p>
+            <div class="project-footer">
+              <span class="project-engine">HTML · CSS · JavaScript</span>
+              <span class="detail-hint">클릭해서 자세히 보기 →</span>
+            </div>
+          </div>
+        </div>
+
         <!-- ph-1 (2026) -->
         <div class="project-card" data-modal="modal-ph1">
           <div class="project-thumb">
@@ -526,6 +548,48 @@
   </footer>
 
   <!-- ===== Modals ===== -->
+
+  <div class="modal-overlay" id="modal-menudamgi" role="dialog" aria-modal="true" aria-labelledby="menudamgi-modal-title">
+    <div class="modal">
+      <button class="modal-close" aria-label="닫기">✕</button>
+      <div class="modal-content">
+        <div class="modal-tags">
+          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">개인 프로젝트</span>
+        </div>
+        <h2 class="modal-title" id="menudamgi-modal-title">메뉴담기</h2>
+        <p class="modal-period">📅 2026년 3월 30일 · 직접 기획 · AI와 함께 구현 · GitHub Pages 배포</p>
+        <p class="modal-summary">신문사 총무로 배달 주문을 받으면서 음식과 디저트를 하나의 장바구니에 함께 담을 수 없어 주문 관리에 어려움을 겪었습니다. 실제 업무에서 느낀 불편을 해결하기 위해 단체 주문 관리 서비스를 구체적으로 기획하고, AI와 함께 구현해 배포한 개인 프로젝트입니다. 신문사 업무에 직접 사용했습니다.</p>
+        <div class="modal-devlog">
+          <h4>주요 기능</h4>
+          <ul>
+            <li>음식·디저트 등 주문별 세션 생성 및 마감 시간 설정</li>
+            <li>메뉴 이름·가격 입력과 메뉴 미리보기, 이전 메뉴 불러오기</li>
+            <li>주문 현황 확인, 메뉴별 수량과 총 금액 집계</li>
+            <li>주문 내역을 텍스트로 복사해 주문·정산에 활용</li>
+          </ul>
+        </div>
+        <div class="modal-devlog">
+          <h4>실제 사용과 개선 과정</h4>
+          <ul>
+            <li>처음에는 메뉴를 하나씩 검색해 이름과 가격을 입력했지만, 준비 과정에 부담이 있었습니다.</li>
+            <li>이후 메뉴판 캡처를 파싱해 입력하는 방법도 시도했습니다. 이 방식에도 수고가 남아 메뉴 입력은 추가 개선 과제로 남았습니다.</li>
+            <li>처음에는 데스크톱 웹을 기준으로 만들었으나, 실제 이용자가 휴대폰으로 접속한다는 점을 확인해 모바일에서도 보기 편하도록 화면을 개선했습니다.</li>
+          </ul>
+        </div>
+        <p class="modal-summary">직접 겪은 문제를 서비스로 구체화하고, 배포와 실제 사용을 거쳐 이용 환경에 맞게 개선한 경험입니다.</p>
+        <div class="menudamgi-gallery">
+          <figure><a href="images/menudamgi-history.png" target="_blank" rel="noopener noreferrer"><img src="images/menudamgi-history.png" alt="메뉴담기 이전 메뉴 불러오기 화면" loading="lazy" /></a><figcaption>이전 메뉴 불러오기</figcaption></figure>
+          <figure><a href="images/menudamgi-menu.png" target="_blank" rel="noopener noreferrer"><img src="images/menudamgi-menu.png" alt="메뉴 이름과 가격 입력 및 미리보기 화면" loading="lazy" /></a><figcaption>메뉴 입력과 미리보기</figcaption></figure>
+          <figure><a href="images/menudamgi-dashboard.png" target="_blank" rel="noopener noreferrer"><img src="images/menudamgi-dashboard.png" alt="주문자 수, 총 금액과 메뉴별 집계 화면" loading="lazy" /></a><figcaption>주문 현황과 메뉴별 집계</figcaption></figure>
+          <figure><a href="images/menudamgi-orders.png" target="_blank" rel="noopener noreferrer"><img src="images/menudamgi-orders.png" alt="개별 주문 내역과 복사용 주문 텍스트 화면" loading="lazy" /></a><figcaption>주문 내역과 텍스트 복사</figcaption></figure>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://hyewang5617.github.io/menudamgi/" target="_blank" rel="noopener noreferrer" class="btn-primary">서비스 사용해 보기 →</a>
+        <a href="https://github.com/hyewang5617/menudamgi" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub에서 보기 →</a>
+      </div>
+    </div>
+  </div>
 
   <div class="modal-overlay" id="modal-meme" role="dialog" aria-modal="true" aria-labelledby="meme-modal-title">
     <div class="modal">

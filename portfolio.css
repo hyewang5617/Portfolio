@@ -705,6 +705,26 @@ footer {
   gap: 0.8rem;
 }
 
+.menudamgi-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.menudamgi-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+}
+
+.menudamgi-gallery figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
 .modal-imgs img {
   width: 100%;
   border-radius: 8px;
@@ -745,7 +765,8 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .modal-imgs {
+  .modal-imgs,
+  .menudamgi-gallery {
     grid-template-columns: 1fr;
   }
 
