@@ -123,8 +123,8 @@
               </div>
             </div>
             <h3 class="project-title">최신 밈 피하기</h3>
-            <p class="project-subtitle">2026 플럼잼 · 밈 장애물 회피 게임</p>
-            <p class="project-desc">유행하는 밈을 소재로 한 장애물과 레이저를 피하는 2D 게임입니다. 이동과 더블 점프로 살아남으며 점수를 쌓습니다.</p>
+            <p class="project-subtitle">🏆 2026 플럼잼 1등 · 밈 장애물 회피 게임</p>
+            <p class="project-desc">유행하는 밈을 소재로 한 장애물과 레이저를 피하는 2D 게임입니다. Unity MCP와 AI Agent를 활용해 제작하고, DOTween·UniTask·R3·VContainer·Addressables 활용에 도전했습니다.</p>
             <div class="project-footer">
               <span class="project-engine">Unity 2D</span>
               <span class="detail-hint">클릭해서 자세히 보기 →</span>
@@ -473,6 +473,23 @@
           </div>
         </div>
 
+        <!-- 뽀모도로 타이머 (2020.08) -->
+        <div class="project-card" data-modal="modal-pomodoro" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-pomodoro">
+          <div class="project-thumb pomodoro-thumb">
+            <img src="images/pomodoro-timer.png" alt="직접 실행한 뽀모도로 타이머 화면" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <div class="project-year">2020</div>
+              <div class="project-tags"><span class="tag">C#</span><span class="tag">Windows Forms</span><span class="tag">데스크톱 앱</span></div>
+            </div>
+            <h3 class="project-title">뽀모도로 타이머</h3>
+            <p class="project-subtitle">2020년 8월 · 집중과 휴식을 관리하는 타이머</p>
+            <p class="project-desc">집중 시간과 짧은·긴 휴식 시간을 설정하는 Windows 데스크톱 앱입니다. 타이머 조작, 종료 알림과 간단한 체크리스트를 제공합니다.</p>
+            <div class="project-footer"><span class="project-engine">C# · .NET Framework</span><span class="detail-hint">클릭해서 자세히 보기 →</span></div>
+          </div>
+        </div>
+
         <!-- 테트리스 (2020) -->
         <div class="project-card" data-modal="modal-tetris">
           <div class="project-thumb">
@@ -570,6 +587,32 @@
   </footer>
 
   <!-- ===== Modals ===== -->
+
+  <div class="modal-overlay" id="modal-pomodoro" role="dialog" aria-modal="true" aria-labelledby="pomodoro-modal-title">
+    <div class="modal">
+      <button class="modal-close" aria-label="닫기">✕</button>
+      <div class="modal-content">
+        <div class="modal-tags"><span class="tag">C#</span><span class="tag">Windows Forms</span><span class="tag">.NET Framework 4.7.2</span></div>
+        <h2 class="modal-title" id="pomodoro-modal-title">뽀모도로 타이머</h2>
+        <p class="modal-period">📅 2020년 8월</p>
+        <p class="modal-summary">집중과 휴식 시간을 나누어 관리하는 Windows 데스크톱 타이머입니다. 집중·짧은 휴식·긴 휴식 모드를 선택하고, 설정 창에서 각 시간을 변경할 수 있습니다.</p>
+        <div class="modal-devlog">
+          <h4>주요 기능</h4>
+          <ul>
+            <li>집중·짧은 휴식·긴 휴식 타이머와 남은 시간 표시</li>
+            <li>일시정지·재개·초기화, 집중 종료 후 짧은 휴식으로 전환</li>
+            <li>집중·휴식 시간 설정과 알람 파일 선택</li>
+            <li>타이머 종료 시 트레이 알림과 소리 재생 처리</li>
+            <li>날짜 표시와 6개 항목의 간단한 체크리스트</li>
+          </ul>
+        </div>
+        <div class="menudamgi-gallery">
+          <figure><a href="images/pomodoro-timer.png" target="_blank" rel="noopener noreferrer"><img src="images/pomodoro-timer.png" alt="뽀모도로 타이머 실행 화면과 체크리스트" loading="lazy" /></a><figcaption>타이머 실행 화면</figcaption></figure>
+          <figure><a href="images/pomodoro-settings.png" target="_blank" rel="noopener noreferrer"><img src="images/pomodoro-settings.png" alt="집중·휴식 시간과 알람소리 설정 창" loading="lazy" /></a><figcaption>시간과 알람 설정</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="modal-overlay" id="modal-sportly" role="dialog" aria-modal="true" aria-labelledby="sportly-modal-title">
     <div class="modal">
@@ -680,8 +723,24 @@
           <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">2D</span><span class="tag">게임잼</span>
         </div>
         <h2 class="modal-title" id="meme-modal-title">최신 밈 피하기</h2>
-        <p class="modal-period">📅 2026년 · 플럼잼</p>
+        <p class="modal-period">📅 2026년 · 🏆 플럼잼 1등</p>
         <p class="modal-summary">67, L을 가져와, 줴줴이야 등 유행하는 밈을 장애물로 구성한 2D 회피 게임입니다. 한 화면에서 랜덤하게 등장하는 스테이지를 버티고, 클리어 후 힐팩으로 체력을 회복하며 다음 단계에 도전합니다.</p>
+        <div class="modal-devlog">
+          <h4>기술 스택</h4>
+          <ul>
+            <li>Unity 2D · C#</li>
+            <li>DOTween · UniTask · R3 · VContainer · Addressables</li>
+            <li>Unity MCP · AI Agent를 활용한 개발</li>
+          </ul>
+        </div>
+        <div class="modal-devlog">
+          <h4>제작 과정</h4>
+          <ul>
+            <li>AI Agent와 함께 개발하고, MCP를 통해 Unity 에디터 작업을 연결해 게임을 제작했습니다.</li>
+            <li>이번 프로젝트에서는 DOTween의 트윈 연출, UniTask의 비동기 처리, R3의 반응형 상태 처리, VContainer의 의존성 주입, Addressables의 에셋 관리 기능을 적극적으로 활용하려고 노력했습니다.</li>
+            <li>2026 플럼잼에 참가해 1등을 수상했습니다.</li>
+          </ul>
+        </div>
         <div class="modal-devlog">
           <h4>플레이 방식</h4>
           <ul>
@@ -693,7 +752,8 @@
         </div>
       </div>
       <div class="modal-footer">
-        <a href="https://github.com/hyewang5617/Avoid-Trend-Memes" target="_blank" rel="noopener noreferrer" class="btn-primary">GitHub에서 보기 →</a>
+        <a href="https://naver.me/xYN7IQiu" target="_blank" rel="noopener noreferrer" class="btn-primary">플레이 파일 다운로드 →</a>
+        <a href="https://github.com/hyewang5617/Avoid-Trend-Memes" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub에서 보기 →</a>
       </div>
     </div>
   </div>

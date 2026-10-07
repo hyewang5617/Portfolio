@@ -354,6 +354,9 @@ section {
 }
 
 .project-thumb.meme-gameplay img { height: 100%; }
+
+.pomodoro-thumb { background: #dda1df; }
+.project-thumb.pomodoro-thumb img { object-fit: contain; }
 .project-card:focus-visible { outline: 3px solid #5865f2; outline-offset: 4px; }
 
 .project-card:not(.featured) .project-thumb {
