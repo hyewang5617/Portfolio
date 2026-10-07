@@ -728,6 +728,16 @@ footer {
   color: #666;
 }
 
+.storyboard-gallery { display: grid; gap: 1.2rem; }
+.storyboard-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+}
+.storyboard-gallery figcaption { margin-top: 0.4rem; font-size: 0.8rem; color: #666; }
+
 .modal-imgs img {
   width: 100%;
   border-radius: 8px;
