@@ -266,6 +266,13 @@ section {
   gap: 1.5rem;
 }
 
+.skills-intro {
+  margin: -0.5rem 0 1.8rem;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
 .skill-card {
   background: #f8f8f8;
   border: 1px solid #e8e8e8;
@@ -296,6 +303,13 @@ section {
   font-size: 0.875rem;
   color: #777;
   line-height: 1.6;
+}
+
+.skill-card .skill-stack {
+  margin-bottom: 0.8rem;
+  color: #454db5;
+  font-weight: 600;
+  overflow-wrap: anywhere;
 }
 
 /* === Projects === */
