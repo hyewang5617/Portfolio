@@ -324,6 +324,18 @@
           </div>
         </div>
 
+        <!-- 다마고치 키우기 (2025.06) -->
+        <div class="project-card" data-modal="modal-tamagochi" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-tamagochi">
+          <div class="project-thumb article-search-thumb"><img src="images/tamagochi-poster.png" alt="다마고치 키우기 포스터" loading="lazy" /></div>
+          <div class="project-body">
+            <div class="project-header"><div class="project-year">2025</div><div class="project-tags"><span class="tag">Logisim</span><span class="tag">논리회로</span><span class="tag">도트 아트</span><span class="tag">팀 프로젝트</span></div></div>
+            <h3 class="project-title">다마고치 키우기</h3>
+            <p class="project-subtitle">2025년 6월 · 디지털논리회로 수업 · 오픈소스 기반 확장</p>
+            <p class="project-desc">기존 다마고치 회로를 확장해 돌봄·성장·통신 기능을 만든 2인 팀 프로젝트입니다. 기획, 거북이 도트와 행동 회로, 경험치·레벨 확장 및 회로 통합을 담당했습니다.</p>
+            <div class="project-footer"><span class="project-engine">Logisim · Aseprite</span><span class="detail-hint">클릭해서 자세히 보기 →</span></div>
+          </div>
+        </div>
+
         <!-- 삐에로의풍선 (2024) -->
         <div class="project-card" data-modal="modal-clown">
           <div class="project-thumb">
@@ -634,6 +646,41 @@
   </footer>
 
   <!-- ===== Modals ===== -->
+
+  <div class="modal-overlay" id="modal-tamagochi" role="dialog" aria-modal="true" aria-labelledby="tamagochi-modal-title">
+    <div class="modal">
+      <button class="modal-close" aria-label="닫기">✕</button>
+      <div class="modal-content">
+        <div class="modal-tags"><span class="tag">Logisim</span><span class="tag">디지털 논리회로</span><span class="tag">Aseprite</span><span class="tag">2인 팀</span><span class="tag">오픈소스 기반 확장</span></div>
+        <h2 class="modal-title" id="tamagochi-modal-title">다마고치 키우기</h2>
+        <p class="modal-period">📅 2025년 6월 · 2학년 디지털논리회로 수업 텀 프로젝트</p>
+        <p class="modal-summary">논리회로로 아기 거북이와 토끼를 돌보는 다마고치 게임을 만든 2인 팀 프로젝트입니다. 먹이주기·놀기·씻기·잠자기로 상태를 관리하고, 경험치를 쌓아 레벨을 올리면 두 다마고치의 통신과 경주를 진행할 수 있도록 구성했습니다.</p>
+        <div class="storyboard-gallery"><figure><a href="images/tamagochi-poster.png" target="_blank" rel="noopener noreferrer"><img src="images/tamagochi-poster.png" alt="다마고치 키우기 프로젝트 소개 포스터" loading="lazy" /></a><figcaption>프로젝트 소개 포스터 · 클릭하면 크게 볼 수 있습니다.</figcaption></figure></div>
+        <div class="modal-devlog"><h4>기획과 직접 맡은 개발</h4><ul>
+          <li>전체 기획, 먹이주기·놀기 회로와 거북이 도트 그래픽, 말풍선 화면 일부를 제작했습니다.</li>
+          <li>경험치·레벨 기능을 확장하고, 버튼 입력에 따라 거북이 그림과 메시지가 바뀌도록 연결했습니다.</li>
+          <li>팀원의 회로를 병합하면서 중복되는 서브회로 이름을 정리하고, 두 캐릭터의 기능을 하나의 프로젝트로 통합했습니다.</li>
+          <li>송신 후 일정 시간 안에 수신 신호가 들어오면 성공으로 처리하는 통신 회로를 구현했습니다.</li>
+          <li>팀원은 씻기·잠자기, 욕구 게이지, 말풍선 화면 일부, 토끼 도트와 플레이 영상 제작을 담당했습니다.</li>
+        </ul></div>
+        <div class="modal-devlog"><h4>회로와 플레이 화면 설계</h4><ul>
+          <li>Aseprite로 직접 찍은 도트 그림을 LED 매트릭스에 연결하고, 행동별 그림과 말풍선으로 현재 상태를 보여주었습니다.</li>
+          <li>터널(Tunnel)로 동일한 신호를 연결해 긴 배선과 복잡한 화면 연결을 정리했습니다. 회로를 읽기 쉽게 구성하면서 플레이어가 버튼으로 간단하게 조작할 수 있는 화면을 만드는 데 집중했습니다.</li>
+          <li>돌봄 행동, 욕구 게이지, 경험치·레벨, 관리하지 않을 때의 게임 오버까지 연결해 다마고치의 상태 변화가 플레이에 반영되도록 구성했습니다.</li>
+        </ul></div>
+        <div class="modal-devlog"><h4>기존 회로를 이해하고 확장한 경험</h4><p>공개된 <a href="https://github.com/younghun1124/Logisim-Tamago-Rabbit" target="_blank" rel="noopener noreferrer">Logisim-Tamago-Rabbit</a>의 경험치 게이지와 토끼 표시 기능을 활용했습니다. 필요한 기능을 분석해 재사용하고, 돌봄 행동·거북이 그래픽·메시지·레벨 및 통신 기능을 추가하는 과정에서 기존 회로 구조를 이해하고 팀원의 작업을 통합하는 경험을 쌓았습니다.</p></div>
+        <div class="modal-devlog"><h4>실제 Logisim 회로</h4><p>제공된 회로 파일을 Logisim-evolution 3.9.0에서 열어 내보낸 이미지입니다. 클릭하면 원본 크기로 볼 수 있습니다.</p></div>
+        <div class="storyboard-gallery">
+          <figure><a href="images/tamagochi-main-circuit.png" target="_blank" rel="noopener noreferrer"><img src="images/tamagochi-main-circuit.png" alt="거북이와 토끼의 LED 화면, 돌봄 버튼, 경험치·레벨 및 통신이 연결된 전체 회로" loading="lazy" /></a><figcaption>전체 회로 · 두 캐릭터의 상태와 플레이 화면 연결</figcaption></figure>
+          <figure><a href="images/tamagochi-communication-circuit.png" target="_blank" rel="noopener noreferrer"><img src="images/tamagochi-communication-circuit.png" alt="레지스터와 카운터로 송수신 신호를 처리하는 commu 통신 서브회로" loading="lazy" /></a><figcaption>통신 서브회로 · 송신 상태 저장과 수신 신호 처리</figcaption></figure>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://youtu.be/iTfWS8x5g60" target="_blank" rel="noopener noreferrer" class="btn-primary">플레이 영상 보기 →</a>
+        <a href="https://github.com/hyewang5617/tamagochi_logisim_circuit" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub에서 보기 →</a>
+      </div>
+    </div>
+  </div>
 
   <div class="modal-overlay" id="modal-flight-delay" role="dialog" aria-modal="true" aria-labelledby="flight-delay-modal-title">
     <div class="modal">
