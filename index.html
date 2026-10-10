@@ -219,6 +219,18 @@
           </div>
         </div>
 
+        <!-- FlightDelayDB (2025.12) -->
+        <div class="project-card" data-modal="modal-flight-delay" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-flight-delay">
+          <div class="project-thumb article-search-thumb"><img src="images/flight-delay-er.png" alt="FlightDelayDB 항공편 중심 ER 모델" loading="lazy" /></div>
+          <div class="project-body">
+            <div class="project-header"><div class="project-year">2025</div><div class="project-tags"><span class="tag">MySQL</span><span class="tag">SQL</span><span class="tag">DB 설계</span><span class="tag">팀 프로젝트</span></div></div>
+            <h3 class="project-title">FlightDelayDB</h3>
+            <p class="project-subtitle">2025년 12월 · 항공편 지연 분석 데이터베이스</p>
+            <p class="project-desc">항공 지연 요인을 관계형 데이터베이스로 구성하고 SQL로 분석한 2인 팀 프로젝트입니다. 기획과 코드 작성을 담당했으며, 팀원은 영어 논문을 작성했습니다.</p>
+            <div class="project-footer"><span class="project-engine">MySQL · SQL</span><span class="detail-hint">클릭해서 자세히 보기 →</span></div>
+          </div>
+        </div>
+
         <!-- Crazy Commuter (2025.12) -->
         <div class="project-card featured" data-modal="modal-road">
           <div class="project-thumb">
@@ -622,6 +634,35 @@
   </footer>
 
   <!-- ===== Modals ===== -->
+
+  <div class="modal-overlay" id="modal-flight-delay" role="dialog" aria-modal="true" aria-labelledby="flight-delay-modal-title">
+    <div class="modal">
+      <button class="modal-close" aria-label="닫기">✕</button>
+      <div class="modal-content">
+        <div class="modal-tags"><span class="tag">MySQL</span><span class="tag">SQL</span><span class="tag">ER 모델</span><span class="tag">관계형 데이터베이스</span><span class="tag">2인 팀</span></div>
+        <h2 class="modal-title" id="flight-delay-modal-title">FlightDelayDB</h2>
+        <p class="modal-period">📅 2025년 12월 · 2학년 데이터베이스 수업 과제</p>
+        <p class="modal-summary">날씨, 항공사, 성수기, 시간대와 공항 혼잡도 등 항공편 지연에 영향을 주는 요인을 통합 관리하고 SQL로 분석하는 데이터베이스 프로젝트입니다. 항공편과 과거 지연 기록을 연결해, 사용자 항공권의 조건에 따른 지연 경향을 조회할 수 있도록 구성했습니다.</p>
+        <div class="modal-devlog"><h4>역할 분담</h4><ul>
+          <li>친구와 2인 팀으로 진행했으며, 기획과 SQL 코드 작성을 담당했습니다.</li>
+          <li>팀원은 영어 논문 작성을 담당했습니다. 데이터베이스 구현과 영어 논문 제출이 함께 요구된 수업 과제였습니다.</li>
+        </ul></div>
+        <div class="modal-devlog"><h4>설계와 구현</h4><ul>
+          <li>항공편을 중심으로 항공사·공항·기체·기상·시즌·지연 이력·사용자 항공권의 관계 설계</li>
+          <li>MySQL 테이블 생성과 기본키·외래키·UNIQUE 제약을 적용한 데이터 무결성 관리</li>
+          <li>항공편과 기상 데이터의 다대다 관계를 매핑 테이블로 구성</li>
+          <li>JOIN·서브쿼리·AVG·COALESCE를 활용해 요인별 평균 지연시간과 합산 결과 조회</li>
+          <li>샘플 데이터 입력과 외래키 오류·중복 입력 방지·항공권 기반 분석 결과 검증</li>
+        </ul></div>
+        <p class="modal-summary">교육용 샘플 데이터를 바탕으로 관계형 모델과 분석 쿼리를 검증한 프로젝트입니다. 실제 운항을 예측하는 서비스로 배포한 단계는 아니며, 복합적인 문제를 데이터 구조와 SQL로 표현하는 경험을 쌓았습니다.</p>
+        <div class="storyboard-gallery">
+          <figure><a href="images/flight-delay-er.png" target="_blank" rel="noopener noreferrer"><img src="images/flight-delay-er.png" alt="항공편과 항공사·공항·기상 데이터 관계 설계도" loading="lazy" /></a><figcaption>초기 ER 모델</figcaption></figure>
+          <figure><a href="images/flight-delay-result.png" target="_blank" rel="noopener noreferrer"><img src="images/flight-delay-result.png" alt="샘플 항공권의 요인별 지연시간 조회 SQL과 결과" loading="lazy" /></a><figcaption>샘플 데이터 기반 SQL 분석 결과</figcaption></figure>
+        </div>
+      </div>
+      <div class="modal-footer"><a href="documents/flight-delay-paper.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary">영어 논문 보기 →</a></div>
+    </div>
+  </div>
 
   <div class="modal-overlay" id="modal-everytime" role="dialog" aria-modal="true" aria-labelledby="everytime-modal-title">
     <div class="modal">
