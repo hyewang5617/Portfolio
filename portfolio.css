@@ -359,6 +359,20 @@ section {
 .project-thumb.pomodoro-thumb img { object-fit: contain; }
 
 .project-thumb.article-search-thumb img { object-fit: contain; }
+
+.everytime-thumb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 1.5rem;
+  background: #eef4ef;
+  color: #245738;
+  text-align: center;
+}
+.everytime-thumb-title { font-size: 1.2rem; font-weight: 700; }
+.everytime-thumb-flow { font-size: 0.8rem; }
 .project-card:focus-visible { outline: 3px solid #5865f2; outline-offset: 4px; }
 
 .project-card:not(.featured) .project-thumb {

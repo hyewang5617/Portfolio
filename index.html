@@ -149,6 +149,24 @@
           </div>
         </div>
 
+        <!-- 에브리타임 키워드 집계 (2026.04) -->
+        <div class="project-card" data-modal="modal-everytime" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-everytime">
+          <div class="project-thumb everytime-thumb">
+            <span class="everytime-thumb-title">에브리타임 키워드 집계</span>
+            <span class="everytime-thumb-flow">검색 결과 → 날짜별 집계 → CSV</span>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <div class="project-year">2026</div>
+              <div class="project-tags"><span class="tag">Python</span><span class="tag">Selenium</span><span class="tag">pandas</span><span class="tag">자동화</span></div>
+            </div>
+            <h3 class="project-title">에브리타임 키워드 집계</h3>
+            <p class="project-subtitle">2026년 4월 · 신문사 기사 취재를 돕는 크롤링 프로그램</p>
+            <p class="project-desc">담당 기자분의 요청으로 에브리타임 키워드 집계를 자동화했습니다. 집계 결과는 실제 기사에서 ‘시위’ 키워드 언급량의 약 74배 증가를 설명하는 수치 근거로 활용됐습니다.</p>
+            <div class="project-footer"><span class="project-engine">Python · Selenium · pandas</span><span class="detail-hint">클릭해서 자세히 보기 →</span></div>
+          </div>
+        </div>
+
         <!-- ph-1 (2026) -->
         <div class="project-card" data-modal="modal-ph1">
           <div class="project-thumb">
@@ -604,6 +622,40 @@
   </footer>
 
   <!-- ===== Modals ===== -->
+
+  <div class="modal-overlay" id="modal-everytime" role="dialog" aria-modal="true" aria-labelledby="everytime-modal-title">
+    <div class="modal">
+      <button class="modal-close" aria-label="닫기">✕</button>
+      <div class="modal-content">
+        <div class="modal-tags"><span class="tag">Python</span><span class="tag">Selenium</span><span class="tag">pandas</span><span class="tag">크롤링</span><span class="tag">업무 자동화</span></div>
+        <h2 class="modal-title" id="everytime-modal-title">에브리타임 키워드 집계</h2>
+        <p class="modal-period">📅 2026년 4월 · 신문사 기자의 요청으로 제작</p>
+        <p class="modal-summary">서울과기대신문사 활동 중 기사에 사용할 에브리타임 단어 수를 집계해야 하는 상황이 있었습니다. 200개가 넘는 단어를 사람이 일일이 세기 어려워, 해당 기사를 담당하던 기자분의 부탁으로 크롤링 프로그램을 만들었습니다.</p>
+        <div class="modal-devlog">
+          <h4>구현 내용</h4>
+          <ul>
+            <li>Selenium으로 Chrome을 제어하고, 사용자가 직접 로그인한 뒤 지정한 키워드의 검색 결과 수집</li>
+            <li>스크롤과 페이지 순회로 게시글을 추가 로딩하고 게시 날짜 추출</li>
+            <li>지정한 날짜별로 키워드 검색 결과의 게시글 수 집계</li>
+            <li>pandas로 날짜·개수 데이터를 정리해 CSV 파일로 저장</li>
+            <li>검색 키워드, 집계 날짜, 페이지 범위와 출력 파일명을 명령행 옵션으로 지정</li>
+          </ul>
+        </div>
+        <div class="modal-devlog">
+          <h4>실제 기사에 활용된 결과</h4>
+          <ul>
+            <li>집계 결과는 서울과기대신문의 STU 사업 관련 기사에 학생들의 관심 변화를 설명하는 근거로 사용됐습니다.</li>
+            <li>기사에서는 2026년 1월부터 3월 16일까지 ‘시위’ 키워드 언급량이 8건, 3월 17일부터 31일까지는 593건으로 약 74배 증가했다고 제시했습니다.</li>
+          </ul>
+        </div>
+        <p class="modal-summary">기자가 수작업으로 확인해야 했던 반복 집계를 자동화하고, 학생들의 관심이 높아졌다는 해석을 뒷받침할 수치 자료를 제공했습니다. 프로그램의 결과가 실제 보도에 반영되면서, 취재 과정의 자료 수집과 근거 제시에 기여한 프로젝트입니다.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="https://github.com/hyewang5617/Crawling-everytime" target="_blank" rel="noopener noreferrer" class="btn-primary">GitHub에서 보기 →</a>
+        <a href="https://times.seoultech.ac.kr/reports/?idx=22288" target="_blank" rel="noopener noreferrer" class="btn-secondary">집계가 활용된 기사 보기 →</a>
+      </div>
+    </div>
+  </div>
 
   <div class="modal-overlay" id="modal-article-search" role="dialog" aria-modal="true" aria-labelledby="article-search-modal-title">
     <div class="modal">
