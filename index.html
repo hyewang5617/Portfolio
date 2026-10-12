@@ -177,6 +177,18 @@
           </div>
         </div>
 
+        <!-- SCANSCAM (2026.09) -->
+        <div class="project-card" data-modal="modal-scanscam" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-scanscam">
+          <div class="project-thumb article-search-thumb"><img src="images/scanscam-demo.png" alt="SCANSCAM 사진 촬영과 샘플 검증 웹 데모 화면" loading="lazy" /></div>
+          <div class="project-body">
+            <div class="project-header"><div class="project-year">2026</div><div class="project-tags"><span class="tag">Solidity</span><span class="tag">JavaScript</span><span class="tag">블록체인</span><span class="tag">팀 프로젝트</span></div></div>
+            <h3 class="project-title">SCANSCAM</h3>
+            <p class="project-subtitle">2026년 9월 · BLOCK AI✳26 지원 프로젝트</p>
+            <p class="project-desc">블록체인과 이미지 분석을 결합한 사진 진위 인증 프로토타입입니다. 직접 팀원을 모아 제안서 작성, 웹 데모, 스마트컨트랙트와 이미지 분석을 맡으며 처음 접한 블록체인을 프로젝트에 적용했습니다.</p>
+            <div class="project-footer"><span class="project-engine">Solidity · Sepolia · FFT</span><span class="detail-hint">클릭해서 자세히 보기 →</span></div>
+          </div>
+        </div>
+
         <!-- 서울과기대신문사 기사찾기 (2026.05) -->
         <div class="project-card" data-modal="modal-article-search" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-article-search">
           <div class="project-thumb article-search-thumb">
@@ -691,6 +703,48 @@
   </footer>
 
   <!-- ===== Modals ===== -->
+
+  <div class="modal-overlay" id="modal-scanscam" role="dialog" aria-modal="true" aria-labelledby="scanscam-modal-title">
+    <div class="modal">
+      <button class="modal-close" aria-label="닫기">✕</button>
+      <div class="modal-content">
+        <div class="modal-tags"><span class="tag">Solidity</span><span class="tag">JavaScript</span><span class="tag">HTML Canvas</span><span class="tag">Sepolia</span><span class="tag">FFT</span><span class="tag">팀 프로젝트</span></div>
+        <h2 class="modal-title" id="scanscam-modal-title">SCANSCAM</h2>
+        <p class="modal-period">📅 2026년 9월 · BLOCK AI✳26 블록체인·AI 융합 해커톤 지원</p>
+        <p class="modal-summary">중고거래 등에 사용하는 사진이 실물을 촬영한 것인지, 가짜 이미지를 화면에 띄워 재촬영한 것인지 확인하는 솔루션을 기획했습니다. 촬영·제출 시점의 시간 조건과 이미지의 재촬영 흔적을 함께 확인하는 프로토타입을 준비했습니다.</p>
+        <div class="modal-devlog"><h4>직접 맡은 역할</h4><ul>
+          <li>해커톤 지원을 위해 팀원을 직접 모집하고 프로젝트 준비</li>
+          <li>문제 정의, 솔루션 구조와 구현 계획을 담은 제안서 작성</li>
+          <li>촬영·샘플 테스트·검증 결과를 보여주는 웹 데모 제작</li>
+          <li>타임락 스마트컨트랙트 작성과 이미지 분석 로직 구현</li>
+        </ul></div>
+        <div class="modal-devlog"><h4>현재 구현한 프로토타입</h4><ul>
+          <li>HTML·CSS·JavaScript와 카메라·Canvas API로 촬영 및 샘플 이미지 분석 화면 구성</li>
+          <li>Sepolia 테스트넷 공개 RPC에서 최신 블록 해시 조회. 연결이 실패하면 시뮬레이션 모드로 전환하고 화면에 표시</li>
+          <li>Solidity 컨트랙트에서 촬영 시각과 block.timestamp의 차이가 2초 이내인지 확인하고, 검증 결과를 mapping과 이벤트로 기록</li>
+          <li>웹 화면에서는 타임락 로직을 브라우저에서 재현하고, 지연 제출과 화면 재촬영 합성 샘플을 비교</li>
+          <li>이미지를 128×128 그레이스케일로 변환하고 2차원 FFT 주파수 분석으로 모아레 격자 패턴을 탐지</li>
+        </ul></div>
+        <div class="modal-devlog"><h4>새로운 분야를 배우며 확인한 과제</h4><ul>
+          <li>블록체인을 처음 접하며, 온체인에 기록할 정보와 브라우저에서 처리할 이미지 분석을 나누어 설계했습니다.</li>
+          <li>제안서의 L2 적용·PyTorch 모델 학습은 향후 계획이며, 현재 데모는 Sepolia(L1 테스트넷)와 규칙 기반 FFT 분석으로 구성했습니다.</li>
+          <li>클라이언트가 전달하는 촬영 시각과 분석 결과를 그대로 신뢰해서는 충분한 진위 보장이 어렵다는 점을 확인했습니다. 실제 서비스에는 신뢰된 촬영·서버 검증과 오라클 서명 검증 등이 추가로 필요합니다.</li>
+          <li>2초 기준은 프로토타입의 조건입니다. 실제 네트워크 지연과 다양한 촬영 환경을 검증해 임계값과 오탐을 개선해야 합니다.</li>
+        </ul></div>
+        <p class="modal-summary">본선에는 선발되지 않았지만, 새로운 분야에 도전하기 위해 팀원을 모으고 아이디어를 제안서와 코드로 구체화했습니다. 블록체인과 이미지 분석을 연결하면서 구현 가능한 범위와 추가 검증이 필요한 지점을 구분한 경험입니다.</p>
+        <div class="storyboard-gallery">
+          <figure><a href="images/scanscam-demo.png" target="_blank" rel="noopener noreferrer"><img src="images/scanscam-demo.png" alt="SCANSCAM 카메라 촬영·실물 및 재촬영 샘플·지연 제출 시뮬레이션 화면" loading="lazy" /></a><figcaption>실제 웹 데모 · 촬영과 샘플 테스트 화면</figcaption></figure>
+          <figure><a href="images/scanscam-pipeline.png" target="_blank" rel="noopener noreferrer"><img src="images/scanscam-pipeline.png" alt="블록 해시 조회·타임락·FFT 분석으로 구성한 3단계 검증과 구현 범위 안내" loading="lazy" /></a><figcaption>검증 파이프라인과 프로토타입 구현 범위</figcaption></figure>
+          <figure><a href="documents/scanscam-proposal.pdf" target="_blank" rel="noopener noreferrer"><img src="images/scanscam-proposal.png" alt="촬영 시점과 재촬영 흔적을 함께 확인하는 SCANSCAM 제안서" loading="lazy" /></a><figcaption>해커톤 지원 당시 작성한 제안서 · 이후 개발 계획을 포함한 자료입니다.</figcaption></figure>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://github.com/hyewang5617/scanscam" target="_blank" rel="noopener noreferrer" class="btn-primary">GitHub에서 보기 →</a>
+        <a href="documents/scanscam-proposal.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary">제안서 보기 →</a>
+        <a href="https://blockhack.kr/" target="_blank" rel="noopener noreferrer" class="btn-secondary">해커톤 안내 →</a>
+      </div>
+    </div>
+  </div>
 
   <div class="modal-overlay" id="modal-tamagochi" role="dialog" aria-modal="true" aria-labelledby="tamagochi-modal-title">
     <div class="modal">
