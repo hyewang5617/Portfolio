@@ -10,7 +10,14 @@ projectFilters.forEach(function(button) {
       filter.setAttribute('aria-pressed', String(selected));
     });
     projectCards.forEach(function(card) {
-      card.hidden = category !== 'all' && card.getAttribute('data-category') !== category;
+      var excluded = category !== 'all' && card.getAttribute('data-category') !== category;
+      card.hidden = excluded;
+      // 강조 카드의 flex 스타일이나 이전 CSS 캐시와 관계없이 필터를 적용한다.
+      if (excluded) {
+        card.style.setProperty('display', 'none', 'important');
+      } else {
+        card.style.removeProperty('display');
+      }
     });
   });
 });
