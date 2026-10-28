@@ -336,7 +336,7 @@ section {
 .project-filter.active { background: #5865f2; border-color: #5865f2; color: #fff; }
 .project-filter:focus-visible { outline: 3px solid #5865f2; outline-offset: 3px; }
 .filter-grid-icon { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
-.project-card[hidden] { display: none; }
+.projects-grid .project-card[hidden] { display: none; }
 
 .project-card {
   background: #fff;
