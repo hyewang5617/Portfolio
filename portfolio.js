@@ -1,3 +1,20 @@
+// === 프로젝트 분류 ===
+var projectFilters = document.querySelectorAll('.project-filter');
+var projectCards = document.querySelectorAll('.project-card[data-category]');
+projectFilters.forEach(function(button) {
+  button.addEventListener('click', function() {
+    var category = button.getAttribute('data-filter');
+    projectFilters.forEach(function(filter) {
+      var selected = filter === button;
+      filter.classList.toggle('active', selected);
+      filter.setAttribute('aria-pressed', String(selected));
+    });
+    projectCards.forEach(function(card) {
+      card.hidden = category !== 'all' && card.getAttribute('data-category') !== category;
+    });
+  });
+});
+
 // === Modal open/close ===
 function openModal(id) {
   var modal = document.getElementById(id);

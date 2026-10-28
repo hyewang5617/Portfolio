@@ -330,6 +330,14 @@ section {
   gap: 1.5rem;
 }
 
+.project-filters { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.5rem; }
+.project-filter { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 44px; padding: 0.65rem 1.15rem; border: 1px solid #ddd; border-radius: 9px; background: #fff; color: #555; font: inherit; font-weight: 600; cursor: pointer; }
+.project-filter:hover { border-color: #5865f2; color: #454db5; }
+.project-filter.active { background: #5865f2; border-color: #5865f2; color: #fff; }
+.project-filter:focus-visible { outline: 3px solid #5865f2; outline-offset: 3px; }
+.filter-grid-icon { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
+.project-card[hidden] { display: none; }
+
 .project-card {
   background: #fff;
   border: 1px solid #e8e8e8;

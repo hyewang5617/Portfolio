@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>정혜원 | 프로젝트 포트폴리오</title>
   <meta name="description" content="게임 개발에 관심을 두고 다양한 분야의 프로젝트를 만드는 정혜원의 포트폴리오입니다." />
-  <link rel="stylesheet" href="portfolio.css?v=5" />
+  <link rel="stylesheet" href="portfolio.css?v=6" />
 </head>
 <body>
 
@@ -153,10 +153,15 @@
     <div class="section-inner">
       <h2 class="section-title">프로젝트</h2>
       <p class="projects-hint">그동안 만든 프로젝트를 모았습니다. 카드를 클릭하면 자세한 설명을 볼 수 있어요.</p>
-      <div class="projects-grid">
+      <div class="project-filters" role="group" aria-label="프로젝트 분류">
+        <button type="button" class="project-filter active" data-filter="all" aria-pressed="true" aria-controls="project-list"><svg class="filter-grid-icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="1" y="1" width="7" height="7" rx="1"/><rect x="12" y="1" width="7" height="7" rx="1"/><rect x="1" y="12" width="7" height="7" rx="1"/><rect x="12" y="12" width="7" height="7" rx="1"/></svg>전체보기</button>
+        <button type="button" class="project-filter" data-filter="game" aria-pressed="false" aria-controls="project-list">게임</button>
+        <button type="button" class="project-filter" data-filter="other" aria-pressed="false" aria-controls="project-list">그외</button>
+      </div>
+      <div class="projects-grid" id="project-list">
 
         <!-- Unity 스터디 (2026.09.17경 ~ 진행 중) -->
-        <div class="project-card" data-modal="modal-unity-study" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-unity-study">
+        <div class="project-card" data-modal="modal-unity-study" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-unity-study" data-category="game">
           <div class="project-thumb article-search-thumb"><img src="images/unity-study-dongle.gif" alt="Unity 스터디에서 개발 중인 동글이 물리 퍼즐 실행 GIF" loading="lazy" /></div>
           <div class="project-body">
             <div class="project-header"><div class="project-year">2026</div><div class="project-tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">스터디 진행</span></div></div>
@@ -168,7 +173,7 @@
         </div>
 
         <!-- 소프트웨어공학 테트리스 (2026.09 말 ~ 개발 중) -->
-        <div class="project-card" data-modal="modal-tetris-swe" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-tetris-swe">
+        <div class="project-card" data-modal="modal-tetris-swe" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-tetris-swe" data-category="game">
           <div class="project-thumb article-search-thumb"><img src="images/tetris-swe-game.png" alt="JavaFX 테트리스의 게임 보드, 고스트 블록과 점수 화면" loading="lazy" /></div>
           <div class="project-body">
             <div class="project-header"><div class="project-year">2026</div><div class="project-tags"><span class="tag">Java</span><span class="tag">JavaFX</span><span class="tag">팀 프로젝트</span></div></div>
@@ -180,7 +185,7 @@
         </div>
 
         <!-- 최신 밈 피하기 (2026 플럼잼) -->
-        <div class="project-card" data-modal="modal-meme" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-meme">
+        <div class="project-card" data-modal="modal-meme" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-meme" data-category="game">
           <div class="project-thumb meme-gameplay">
             <img src="images/avoid-trend-memes.gif" alt="최신 밈 피하기 실행 및 게임플레이 영상" loading="lazy" />
           </div>
@@ -202,7 +207,7 @@
         </div>
 
         <!-- SCANSCAM (2026.09) -->
-        <div class="project-card" data-modal="modal-scanscam" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-scanscam">
+        <div class="project-card" data-modal="modal-scanscam" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-scanscam" data-category="other">
           <div class="project-thumb article-search-thumb"><img src="images/scanscam-demo.png" alt="SCANSCAM 사진 촬영과 샘플 검증 웹 데모 화면" loading="lazy" /></div>
           <div class="project-body">
             <div class="project-header"><div class="project-year">2026</div><div class="project-tags"><span class="tag">Solidity</span><span class="tag">JavaScript</span><span class="tag">블록체인</span><span class="tag">팀 프로젝트</span></div></div>
@@ -214,7 +219,7 @@
         </div>
 
         <!-- 서울과기대신문사 기사찾기 (2026.05) -->
-        <div class="project-card" data-modal="modal-article-search" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-article-search">
+        <div class="project-card" data-modal="modal-article-search" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-article-search" data-category="other">
           <div class="project-thumb article-search-thumb">
             <img src="images/article-search-network.png" alt="서울과기대신문 기사 검색의 네트워크 그래프와 키워드 미리보기" loading="lazy" />
           </div>
@@ -231,7 +236,7 @@
         </div>
 
         <!-- 에브리타임 키워드 집계 (2026.04) -->
-        <div class="project-card" data-modal="modal-everytime" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-everytime">
+        <div class="project-card" data-modal="modal-everytime" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-everytime" data-category="other">
           <div class="project-thumb everytime-thumb">
             <span class="everytime-thumb-title">에브리타임 키워드 집계</span>
             <span class="everytime-thumb-flow">검색 결과 → 날짜별 집계 → CSV</span>
@@ -249,7 +254,7 @@
         </div>
 
         <!-- ph-1 (2026) -->
-        <div class="project-card" data-modal="modal-ph1">
+        <div class="project-card" data-modal="modal-ph1" data-category="game">
           <div class="project-thumb">
             <img src="images/ph1.gif" alt="ph-1 게임플레이" loading="lazy" />
           </div>
@@ -275,7 +280,7 @@
         </div>
 
         <!-- Cooking Papa (2026) -->
-        <div class="project-card" data-modal="modal-cooking">
+        <div class="project-card" data-modal="modal-cooking" data-category="game">
           <div class="project-thumb video-thumb">
             <div class="play-btn">▶</div>
             <span class="play-label">플레이영상 보기</span>
@@ -301,7 +306,7 @@
         </div>
 
         <!-- FlightDelayDB (2025.12) -->
-        <div class="project-card" data-modal="modal-flight-delay" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-flight-delay">
+        <div class="project-card" data-modal="modal-flight-delay" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-flight-delay" data-category="other">
           <div class="project-thumb article-search-thumb"><img src="images/flight-delay-er.png" alt="FlightDelayDB 항공편 중심 ER 모델" loading="lazy" /></div>
           <div class="project-body">
             <div class="project-header"><div class="project-year">2025</div><div class="project-tags"><span class="tag">MySQL</span><span class="tag">SQL</span><span class="tag">DB 설계</span><span class="tag">팀 프로젝트</span></div></div>
@@ -313,7 +318,7 @@
         </div>
 
         <!-- Crazy Commuter (2025.12) -->
-        <div class="project-card featured" data-modal="modal-road">
+        <div class="project-card featured" data-modal="modal-road" data-category="game">
           <div class="project-thumb">
             <img src="images/crazy_1.gif" alt="Crazy Commuter 게임플레이" loading="lazy" />
           </div>
@@ -338,7 +343,7 @@
         </div>
 
         <!-- Sportly (2025) -->
-        <div class="project-card" data-modal="modal-sportly" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-sportly">
+        <div class="project-card" data-modal="modal-sportly" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-sportly" data-category="other">
           <div class="project-thumb">
             <img src="images/sportly-swagger.png" alt="Sportly 백엔드 Swagger API 문서" loading="lazy" />
           </div>
@@ -360,7 +365,7 @@
         </div>
 
         <!-- 메뉴담기 (2025) -->
-        <div class="project-card" data-modal="modal-menudamgi" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-menudamgi">
+        <div class="project-card" data-modal="modal-menudamgi" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-menudamgi" data-category="other">
           <div class="project-thumb">
             <img src="images/menudamgi-dashboard.png" alt="메뉴담기 주문 현황 대시보드와 메뉴별 집계" loading="lazy" />
           </div>
@@ -382,7 +387,7 @@
         </div>
 
         <!-- 함정 피하기 게임 (2025) -->
-        <div class="project-card" data-modal="modal-trap">
+        <div class="project-card" data-modal="modal-trap" data-category="game">
           <div class="project-thumb">
             <img src="images/trap.gif" alt="함정 피하기 게임 플레이" loading="lazy" />
           </div>
@@ -406,7 +411,7 @@
         </div>
 
         <!-- 다마고치 키우기 (2025.06) -->
-        <div class="project-card" data-modal="modal-tamagochi" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-tamagochi">
+        <div class="project-card" data-modal="modal-tamagochi" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-tamagochi" data-category="game">
           <div class="project-thumb article-search-thumb"><img src="images/tamagochi-poster.png" alt="다마고치 키우기 포스터" loading="lazy" /></div>
           <div class="project-body">
             <div class="project-header"><div class="project-year">2025</div><div class="project-tags"><span class="tag">Logisim</span><span class="tag">논리회로</span><span class="tag">도트 아트</span><span class="tag">팀 프로젝트</span></div></div>
@@ -418,7 +423,7 @@
         </div>
 
         <!-- 삐에로의풍선 (2024) -->
-        <div class="project-card" data-modal="modal-clown">
+        <div class="project-card" data-modal="modal-clown" data-category="game">
           <div class="project-thumb">
             <img src="images/clown_play.gif" alt="삐에로의풍선 플레이 영상" loading="lazy" />
           </div>
@@ -443,7 +448,7 @@
         </div>
 
         <!-- 뱀서라이크 (2024) -->
-        <div class="project-card featured" data-modal="modal-vamp">
+        <div class="project-card featured" data-modal="modal-vamp" data-category="game">
           <div class="project-thumb">
             <img src="images/vamp_1.gif" alt="뱀서라이크 게임플레이" loading="lazy" />
           </div>
@@ -467,7 +472,7 @@
         </div>
 
         <!-- 내 과일을 받아줘 (2024) -->
-        <div class="project-card" data-modal="modal-fruit">
+        <div class="project-card" data-modal="modal-fruit" data-category="game">
           <div class="project-thumb video-thumb">
             <div class="play-btn">▶</div>
             <span class="play-label">플레이영상 보기</span>
@@ -492,7 +497,7 @@
         </div>
 
         <!-- Arrow Master (2023) -->
-        <div class="project-card" data-modal="modal-arrow">
+        <div class="project-card" data-modal="modal-arrow" data-category="game">
           <div class="project-thumb">
             <img src="images/arrow_play.gif" alt="Arrow Master 플레이" loading="lazy" />
           </div>
@@ -516,7 +521,7 @@
         </div>
 
         <!-- 더 인기, 더 팔로워 (2023) -->
-        <div class="project-card" data-modal="modal-follower">
+        <div class="project-card" data-modal="modal-follower" data-category="game">
           <div class="project-thumb">
             <img src="images/follower_play.gif" alt="더 인기 더 팔로워" loading="lazy" />
           </div>
@@ -540,7 +545,7 @@
         </div>
 
         <!-- 빛이있으라 (2022) -->
-        <div class="project-card" data-modal="modal-bit">
+        <div class="project-card" data-modal="modal-bit" data-category="game">
           <div class="project-thumb">
             <img src="images/bitgame_new.gif" alt="빛이있으라 게임플레이" loading="lazy" />
           </div>
@@ -565,7 +570,7 @@
         </div>
 
         <!-- Shark Timer Game (2021) -->
-        <div class="project-card" data-modal="modal-shark">
+        <div class="project-card" data-modal="modal-shark" data-category="game">
           <div class="project-thumb">
             <img src="images/shark_play.gif" alt="Shark Timer Game 플레이" loading="lazy" />
           </div>
@@ -589,7 +594,7 @@
         </div>
 
         <!-- 뽥머랭님 팬게임 (2021) -->
-        <div class="project-card" data-modal="modal-fan">
+        <div class="project-card" data-modal="modal-fan" data-category="game">
           <div class="project-thumb">
             <video src="images/GIF.mp4" autoplay loop muted playsinline></video>
           </div>
@@ -614,7 +619,7 @@
         </div>
 
         <!-- 뽀모도로 타이머 (2020.08) -->
-        <div class="project-card" data-modal="modal-pomodoro" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-pomodoro">
+        <div class="project-card" data-modal="modal-pomodoro" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-pomodoro" data-category="game">
           <div class="project-thumb pomodoro-thumb">
             <img src="images/pomodoro-timer.png" alt="직접 실행한 뽀모도로 타이머 화면" loading="lazy" />
           </div>
@@ -631,7 +636,7 @@
         </div>
 
         <!-- 테트리스 (2020) -->
-        <div class="project-card" data-modal="modal-tetris">
+        <div class="project-card" data-modal="modal-tetris" data-category="game">
           <div class="project-thumb">
             <img src="images/tetris_2.gif" alt="테트리스 플레이" loading="lazy" />
           </div>
@@ -655,7 +660,7 @@
         </div>
 
         <!-- 포도씨의 모험 2D (2020) -->
-        <div class="project-card" data-modal="modal-podo">
+        <div class="project-card" data-modal="modal-podo" data-category="game">
           <div class="project-thumb video-thumb">
             <div class="play-btn">▶</div>
             <span class="play-label">플레이영상 보기</span>
@@ -681,7 +686,7 @@
         </div>
 
         <!-- 포도씨의 모험 3D (첫 번째 게임) -->
-        <div class="project-card" data-modal="modal-podo3d">
+        <div class="project-card" data-modal="modal-podo3d" data-category="game">
           <div class="project-thumb">
             <img src="images/podo_3d_title.png" alt="포도씨의 모험 3D" loading="lazy" />
           </div>
