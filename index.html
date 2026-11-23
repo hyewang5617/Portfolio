@@ -160,6 +160,18 @@
       </div>
       <div class="projects-grid" id="project-list">
 
+        <!-- EIDOS · EndPoint 해커톤 -->
+        <div class="project-card" data-modal="modal-eidos" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-eidos" data-category="other">
+          <div class="project-thumb article-search-thumb"><img src="images/eidos-logo.png" alt="EIDOS 강의 자료 숏폼 시각화 서비스 로고" loading="lazy" /></div>
+          <div class="project-body">
+            <div class="project-header"><div class="project-year">2026</div><div class="project-tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">SVG</span><span class="tag">해커톤</span></div></div>
+            <h3 class="project-title">EIDOS · EndPoint 해커톤</h3>
+            <p class="project-subtitle">2026년 11월 · 3인 팀 · 프론트엔드 담당</p>
+            <p class="project-desc">강의 PDF를 개념·예시 단위의 숏폼 학습 콘텐츠로 시각화하는 웹 서비스입니다. 업로드와 강의함, 생성 상태 확인, 음성·자막과 동기화되는 시각화 플레이어를 구현했습니다.</p>
+            <div class="project-footer"><span class="project-engine">React · TypeScript · SVG · KaTeX</span><span class="detail-hint">클릭해서 자세히 보기 →</span></div>
+          </div>
+        </div>
+
         <!-- Unity 스터디 (2026.09.17경 ~ 진행 중) -->
         <div class="project-card" data-modal="modal-unity-study" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-unity-study" data-category="game">
           <div class="project-thumb article-search-thumb"><img src="images/unity-study-dongle.gif" alt="Unity 스터디에서 개발 중인 동글이 물리 퍼즐 실행 GIF" loading="lazy" /></div>
@@ -732,6 +744,35 @@
   </footer>
 
   <!-- ===== Modals ===== -->
+
+  <div class="modal-overlay" id="modal-eidos" role="dialog" aria-modal="true" aria-labelledby="eidos-title">
+    <div class="modal">
+      <button class="modal-close" aria-label="닫기">✕</button>
+      <div class="modal-content">
+        <div class="modal-tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span><span class="tag">SVG</span><span class="tag">KaTeX</span></div>
+        <h2 class="modal-title" id="eidos-title">EIDOS · EndPoint 해커톤</h2>
+        <p class="modal-period">📅 2026년 11월 · 교내 EndPoint 해커톤 · 3인 팀 · 프론트엔드 담당</p>
+        <p class="modal-summary">대학 관련 소프트웨어 개발을 주제로, 긴 강의 PDF를 개념과 예시 단위의 숏폼 학습 시리즈로 바꾸는 서비스를 만들었습니다. 입문·기본·심화 단계를 선택하고 콘텐츠를 넘겨 보면서 원본 강의 페이지도 함께 확인할 수 있도록 구성했습니다. 팀원들은 백엔드와 AI를, 저는 프론트엔드를 담당했습니다.</p>
+        <div class="modal-devlog"><h4>직접 구현한 사용자 흐름</h4><ul>
+          <li>PDF 업로드, 학습 단계 선택, 생성 작업 상태 조회와 강의함, 숏폼 콘텐츠 탐색·재생 화면을 구현했습니다.</li>
+          <li>백엔드 API와 연결해 생성 진행 상태를 주기적으로 확인하고, 결과를 플레이어에서 불러오도록 구성했습니다.</li>
+          <li>음성·자막·시각화와 원본 페이지를 연결해 설명을 보면서 자료의 근거를 확인할 수 있게 했습니다.</li>
+        </ul></div>
+        <div class="modal-devlog"><h4>JSON 설계도를 재생하는 시각화 플레이어</h4><ul>
+          <li>AI가 생성한 장면·동작 설계도를 프론트엔드에서 해석해 배열과 다이어그램은 SVG, 코드·텍스트는 HTML, 수식은 KaTeX로 표시했습니다.</li>
+          <li>재생 시점까지의 동작을 순서대로 적용해 화면 상태를 계산하여, 되감기나 탐색 후에도 해당 시점의 상태를 재현하도록 했습니다.</li>
+          <li>이동 시간의 진행률로 위치를 보간하고 Smoothstep과 사인 곡선으로 배열 교환 동작을 표현했습니다.</li>
+        </ul></div>
+        <div class="modal-devlog"><h4>가독성과 배치 문제 해결</h4><p>긴 설명이 도형 밖으로 나가거나 서로 겹치는 문제를 줄이기 위해 글자 종류별 너비를 추정해 줄바꿈하고, 줄 수에 맞춰 도형 크기와 노드 간격을 계산했습니다. 화살표 라벨도 여러 줄로 배치하고 전체 그림 영역에 포함했습니다. 실제 학습 예시를 재생·탐색하며 배치와 이동 경로를 확인했습니다.</p></div>
+        <div class="modal-devlog"><h4>팀 연동과 개선 과제</h4><p>AI의 생성 결과를 화면에서 재생할 수 있는 데이터 구조로 연결하며 백엔드·AI 담당자와 협업했습니다. 브라우저에 저장한 무작위 ID로 강의 목록을 구분했으며, 실제 서비스로 확장하려면 계정 인증과 서버의 접근 권한 검사가 필요합니다. 재생 동작 수가 늘어날 때는 장면별 중간 상태 저장 등으로 계산 범위를 줄이는 개선도 필요합니다.</p></div>
+        <p class="modal-summary">공개 사이트의 학습 예시는 서버 없이 재생할 수 있습니다. 새 PDF 업로드·생성은 팀 서버 운영과 유료 AI 호출에 의존하므로 이용 가능 범위가 다릅니다.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="https://2026endpoint.github.io/team19/" target="_blank" rel="noopener noreferrer" class="btn-primary">학습 예시 체험 →</a>
+        <a href="https://github.com/2026endpoint/team19" target="_blank" rel="noopener noreferrer" class="btn-secondary">팀 GitHub →</a>
+      </div>
+    </div>
+  </div>
 
   <div class="modal-overlay" id="modal-unity-study" role="dialog" aria-modal="true" aria-labelledby="unity-study-title">
     <div class="modal">
